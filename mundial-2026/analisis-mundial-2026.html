@@ -1,0 +1,752 @@
+<title>Mundial 2026 — Análisis Completo</title>
+<style>
+  :root{
+    --bg:#10151a;
+    --surface:#1a2128;
+    --surface-2:#212a32;
+    --ink:#edefef;
+    --ink-dim:#8fa0a8;
+    --ink-faint:#5e6d74;
+    --gold:#e3b23c;
+    --pitch:#3aa876;
+    --predict:#7b98d6;
+    --line:rgba(237,239,239,0.09);
+    --font-display:Futura,"Trebuchet MS","Century Gothic",sans-serif;
+    --font-body:Georgia,"Iowan Old Style","Palatino Linotype",serif;
+    --font-mono:ui-monospace,"SF Mono","Cascadia Code",Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold);}
+  ::selection{background:var(--gold);color:#1a1305;}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px 96px;}
+
+  header.hero{
+    padding:64px 24px 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  .hero-inner{max-width:1120px;margin:0 auto;}
+  .eyebrow{
+    font-family:var(--font-display);
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:12.5px;
+    color:var(--pitch);
+    margin:0 0 14px;
+  }
+  h1{
+    font-family:var(--font-display);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.01em;
+    font-size:clamp(34px,5.4vw,58px);
+    line-height:1.03;
+    margin:0 0 18px;
+    text-wrap:balance;
+    max-width:16ch;
+  }
+  .hero-sub{
+    color:var(--ink-dim);
+    font-size:17px;
+    max-width:62ch;
+    margin:0 0 28px;
+  }
+  .status-strip{
+    display:flex;flex-wrap:wrap;gap:10px;
+  }
+  .chip{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    letter-spacing:.02em;
+    padding:7px 13px;
+    border-radius:100px;
+    border:1px solid var(--line);
+    color:var(--ink-dim);
+    background:var(--surface);
+  }
+  .chip b{color:var(--ink);font-weight:600;}
+  .chip.real{border-color:rgba(58,168,118,.35);}
+  .chip.real b{color:var(--pitch);}
+  .chip.pred{border-color:rgba(123,152,214,.35);}
+  .chip.pred b{color:var(--predict);}
+
+  nav.jump{
+    display:flex;flex-wrap:wrap;gap:8px 18px;
+    margin:28px 0 0;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  nav.jump a{
+    font-family:var(--font-display);
+    text-transform:uppercase;
+    font-size:12.5px;
+    letter-spacing:.08em;
+    color:var(--ink-dim);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+  }
+  nav.jump a:hover{color:var(--gold);border-color:var(--gold);}
+
+  section{margin-bottom:64px;}
+  .section-head{
+    display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+    margin-bottom:8px;
+  }
+  h2{
+    font-family:var(--font-display);
+    text-transform:uppercase;
+    letter-spacing:.02em;
+    font-size:26px;
+    margin:0;
+  }
+  .section-num{
+    font-family:var(--font-mono);
+    color:var(--ink-faint);
+    font-size:14px;
+  }
+  .section-desc{
+    color:var(--ink-dim);
+    font-size:15px;
+    max-width:68ch;
+    margin:6px 0 28px;
+  }
+
+  /* legend */
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:26px;font-family:var(--font-mono);font-size:12px;color:var(--ink-dim);}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
+  .dot.real{background:var(--pitch);}
+  .dot.pred{background:var(--predict);}
+
+  /* group cards */
+  .group-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(258px,1fr));
+    gap:18px;
+  }
+  .group-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:18px 18px 14px;
+  }
+  .group-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:12px;
+  }
+  .group-label{
+    font-family:var(--font-display);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    font-size:15px;
+    color:var(--gold);
+  }
+  .host-tag{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--ink-faint);
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .group-card table th{
+    text-align:left;font-family:var(--font-mono);font-weight:400;
+    color:var(--ink-faint);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;
+    padding:4px 4px 6px;border-bottom:1px solid var(--line);
+  }
+  .group-card table td{
+    padding:6px 4px;border-bottom:1px solid var(--line);
+    font-family:var(--font-mono);font-variant-numeric:tabular-nums;
+  }
+  .group-card table td:nth-child(2){font-family:var(--font-body);font-size:14px;}
+  .group-card tr:last-child td{border-bottom:none;}
+  .group-card tr.q td:nth-child(2){color:var(--ink);font-weight:700;}
+  .group-card tr.q td:first-child{color:var(--pitch);}
+  .group-card tr.q3 td:first-child{color:var(--predict);}
+  .group-card tr.q3 td:nth-child(2){color:var(--ink);}
+  details{margin-top:10px;}
+  summary{
+    cursor:pointer;font-family:var(--font-mono);font-size:11px;
+    color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;
+    padding:4px 0;
+  }
+  summary:hover{color:var(--ink-dim);}
+  .matchlist{list-style:none;margin:8px 0 0;padding:0;font-family:var(--font-mono);font-size:12.5px;color:var(--ink-dim);}
+  .matchlist li{padding:3px 0;border-bottom:1px dotted var(--line);}
+  .matchlist li:last-child{border-bottom:none;}
+
+  .thirds-note{
+    margin-top:22px;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:6px;
+    font-size:14px;color:var(--ink-dim);
+  }
+  .thirds-note b{color:var(--ink);}
+
+  /* knockout match cards */
+  .match-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:16px;
+  }
+  .match{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-left:3px solid var(--ink-faint);
+    border-radius:4px;
+    padding:14px 16px 16px;
+  }
+  .match.real{border-left-color:var(--pitch);}
+  .match.pred{border-left-color:var(--predict);}
+  .match-meta{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:10px;
+  }
+  .tag{
+    font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;
+    text-transform:uppercase;padding:2px 7px;border-radius:3px;
+  }
+  .match.real .tag{background:rgba(58,168,118,.14);color:var(--pitch);}
+  .match.pred .tag{background:rgba(123,152,214,.14);color:var(--predict);}
+  .match-meta .date{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);}
+  .team{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:5px 0;
+  }
+  .team .name{font-size:16px;}
+  .team .score{font-family:var(--font-mono);font-size:18px;font-variant-numeric:tabular-nums;color:var(--ink-dim);}
+  .team.win .name{font-weight:700;color:var(--ink);}
+  .team.win .score{color:var(--gold);font-weight:700;}
+  .match-extra{font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-top:6px;}
+  .note{font-size:13px;color:var(--ink-dim);margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line);}
+
+  .final-card{
+    background:linear-gradient(180deg,var(--surface) 0%,var(--surface-2) 100%);
+    border:1px solid rgba(227,178,60,.35);
+  }
+  .final-card .team.win .name{color:var(--gold);}
+
+  .methodology{
+    margin-top:80px;padding-top:32px;border-top:1px solid var(--line);
+    color:var(--ink-dim);font-size:14px;max-width:72ch;
+  }
+  .methodology h3{
+    font-family:var(--font-display);text-transform:uppercase;letter-spacing:.04em;
+    font-size:14px;color:var(--ink);margin:0 0 10px;
+  }
+  .methodology p{margin:0 0 14px;}
+  .methodology ul{margin:0 0 14px;padding-left:20px;}
+  .methodology li{margin-bottom:4px;}
+
+  @media (max-width:640px){
+    header.hero{padding:44px 20px 32px;}
+    .wrap{padding:0 20px 72px;}
+  }
+</style>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Copa Mundial de la FIFA · Canadá · México · Estados Unidos</p>
+    <h1>Mundial 2026, partido a partido</h1>
+    <p class="hero-sub">Los 72 partidos de fase de grupos y los cruces de dieciseisavos ya jugados son resultados reales y verificados. A partir de hoy, 2 de julio, cada marcador restante es una predicción fundamentada en el ranking FIFA, la forma mostrada en el torneo y el análisis de cada cruce.</p>
+    <div class="status-strip">
+      <span class="chip"><b>Hoy</b> · 2 de julio de 2026</span>
+      <span class="chip"><b>Fase actual</b> · Dieciseisavos de final</span>
+      <span class="chip real"><b>106</b> partidos reales confirmados</span>
+      <span class="chip pred"><b>28</b> partidos por predecir</span>
+    </div>
+    <nav class="jump">
+      <a href="#grupos">Fase de grupos</a>
+      <a href="#dieciseisavos">Dieciseisavos</a>
+      <a href="#octavos">Octavos</a>
+      <a href="#cuartos">Cuartos</a>
+      <a href="#semis">Semifinales</a>
+      <a href="#final">Final</a>
+      <a href="#metodologia">Metodología</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="grupos">
+    <div class="section-head"><span class="section-num">01</span><h2>Fase de grupos — resultado real</h2></div>
+    <p class="section-desc">Los 12 grupos ya cerraron. Pasan los dos primeros de cada grupo (24 equipos) más los ocho mejores terceros (8 equipos) = 32 clasificados a dieciseisavos. Toca cada card para ver los seis partidos del grupo.</p>
+
+    <div class="group-grid">
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo A</span><span class="host-tag">México anfitrión</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>México</td><td>9</td><td>6</td><td>0</td><td>+6</td></tr>
+          <tr class="q"><td>2</td><td>Sudáfrica</td><td>4</td><td>2</td><td>3</td><td>−1</td></tr>
+          <tr><td>3</td><td>Corea del Sur</td><td>3</td><td>2</td><td>3</td><td>−1</td></tr>
+          <tr><td>4</td><td>Chequia</td><td>1</td><td>2</td><td>6</td><td>−4</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>México 2–0 Sudáfrica</li><li>Corea 2–1 Chequia</li>
+          <li>Chequia 1–1 Sudáfrica</li><li>México 1–0 Corea</li>
+          <li>México 3–0 Chequia</li><li>Sudáfrica 1–0 Corea</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo B</span><span class="host-tag">Canadá anfitrión</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Suiza</td><td>7</td><td>8</td><td>3</td><td>+5</td></tr>
+          <tr class="q"><td>2</td><td>Canadá</td><td>4</td><td>8</td><td>4</td><td>+4</td></tr>
+          <tr class="q3"><td>3</td><td>Bosnia y Herzegovina</td><td>4</td><td>5</td><td>6</td><td>−1</td></tr>
+          <tr><td>4</td><td>Catar</td><td>1</td><td>2</td><td>10</td><td>−8</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>Canadá 1–1 Bosnia</li><li>Suiza 1–1 Catar</li>
+          <li>Suiza 4–1 Bosnia</li><li>Canadá 6–0 Catar</li>
+          <li>Suiza 3–1 Canadá</li><li>Bosnia 3–1 Catar</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo C</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Brasil</td><td>7</td><td>7</td><td>1</td><td>+6</td></tr>
+          <tr class="q"><td>2</td><td>Marruecos</td><td>7</td><td>6</td><td>3</td><td>+3</td></tr>
+          <tr><td>3</td><td>Escocia</td><td>3</td><td>1</td><td>4</td><td>−3</td></tr>
+          <tr><td>4</td><td>Haití</td><td>0</td><td>2</td><td>8</td><td>−6</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>Brasil 1–1 Marruecos</li><li>Escocia 1–0 Haití</li>
+          <li>Escocia 0–1 Marruecos</li><li>Brasil 3–0 Haití</li>
+          <li>Brasil 3–0 Escocia</li><li>Marruecos 4–2 Haití</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo D</span><span class="host-tag">EE. UU. anfitrión</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Estados Unidos</td><td>6</td><td>8</td><td>4</td><td>+4</td></tr>
+          <tr class="q"><td>2</td><td>Australia</td><td>4</td><td>2</td><td>2</td><td>0</td></tr>
+          <tr class="q3"><td>3</td><td>Paraguay</td><td>4</td><td>2</td><td>4</td><td>−2</td></tr>
+          <tr><td>4</td><td>Turquía</td><td>3</td><td>3</td><td>5</td><td>−2</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>EE. UU. 4–1 Paraguay</li><li>Australia 2–0 Turquía</li>
+          <li>EE. UU. 2–0 Australia</li><li>Turquía 0–1 Paraguay</li>
+          <li>Turquía 3–2 EE. UU.</li><li>Paraguay 0–0 Australia</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo E</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Alemania</td><td>6</td><td>10</td><td>4</td><td>+6</td></tr>
+          <tr class="q"><td>2</td><td>Costa de Marfil</td><td>6</td><td>4</td><td>2</td><td>+2</td></tr>
+          <tr class="q3"><td>3</td><td>Ecuador</td><td>4</td><td>2</td><td>2</td><td>0</td></tr>
+          <tr><td>4</td><td>Curazao</td><td>1</td><td>1</td><td>9</td><td>−8</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>Alemania 7–1 Curazao</li><li>Costa de Marfil 1–0 Ecuador</li>
+          <li>Alemania 2–1 Costa de Marfil</li><li>Ecuador 0–0 Curazao</li>
+          <li>Costa de Marfil 2–0 Curazao</li><li>Ecuador 2–1 Alemania</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo F</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Países Bajos</td><td>7</td><td>10</td><td>4</td><td>+6</td></tr>
+          <tr class="q"><td>2</td><td>Japón</td><td>5</td><td>7</td><td>3</td><td>+4</td></tr>
+          <tr class="q3"><td>3</td><td>Suecia</td><td>4</td><td>7</td><td>7</td><td>0</td></tr>
+          <tr><td>4</td><td>Túnez</td><td>0</td><td>2</td><td>12</td><td>−10</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>P. Bajos 2–2 Japón</li><li>Suecia 5–1 Túnez</li>
+          <li>P. Bajos 5–1 Suecia</li><li>Japón 4–0 Túnez</li>
+          <li>Japón 1–1 Suecia</li><li>P. Bajos 3–1 Túnez</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo G</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Bélgica</td><td>5</td><td>6</td><td>2</td><td>+4</td></tr>
+          <tr class="q"><td>2</td><td>Egipto</td><td>5</td><td>5</td><td>3</td><td>+2</td></tr>
+          <tr><td>3</td><td>Irán</td><td>3</td><td>3</td><td>3</td><td>0</td></tr>
+          <tr><td>4</td><td>Nueva Zelanda</td><td>1</td><td>4</td><td>10</td><td>−6</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>Bélgica 1–1 Egipto</li><li>Irán 2–2 Nueva Zelanda</li>
+          <li>Bélgica 0–0 Irán</li><li>Egipto 3–1 Nueva Zelanda</li>
+          <li>Egipto 1–1 Irán</li><li>Bélgica 5–1 Nueva Zelanda</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo H</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>España</td><td>7</td><td>5</td><td>0</td><td>+5</td></tr>
+          <tr class="q"><td>2</td><td>Cabo Verde</td><td>3</td><td>2</td><td>2</td><td>0</td></tr>
+          <tr><td>3</td><td>Uruguay</td><td>2</td><td>3</td><td>4</td><td>−1</td></tr>
+          <tr><td>4</td><td>Arabia Saudita</td><td>2</td><td>1</td><td>5</td><td>−4</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>España 0–0 Cabo Verde</li><li>Arabia S. 1–1 Uruguay</li>
+          <li>España 4–0 Arabia S.</li><li>Uruguay 2–2 Cabo Verde</li>
+          <li>Cabo Verde 0–0 Arabia S.</li><li>España 1–0 Uruguay</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo I</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Francia</td><td>9</td><td>10</td><td>2</td><td>+8</td></tr>
+          <tr class="q"><td>2</td><td>Noruega</td><td>6</td><td>8</td><td>7</td><td>+1</td></tr>
+          <tr class="q3"><td>3</td><td>Senegal</td><td>3</td><td>8</td><td>6</td><td>+2</td></tr>
+          <tr><td>4</td><td>Irak</td><td>0</td><td>1</td><td>12</td><td>−11</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>Francia 3–1 Senegal</li><li>Noruega 4–1 Irak</li>
+          <li>Francia 3–0 Irak</li><li>Noruega 3–2 Senegal</li>
+          <li>Francia 4–1 Noruega</li><li>Senegal 5–0 Irak</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo J</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Argentina</td><td>9</td><td>8</td><td>1</td><td>+7</td></tr>
+          <tr class="q"><td>2</td><td>Austria</td><td>4</td><td>6</td><td>6</td><td>0</td></tr>
+          <tr class="q3"><td>3</td><td>Argelia</td><td>4</td><td>5</td><td>7</td><td>−2</td></tr>
+          <tr><td>4</td><td>Jordania</td><td>0</td><td>3</td><td>8</td><td>−5</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>Argentina 3–0 Argelia</li><li>Austria 3–1 Jordania</li>
+          <li>Argentina 2–0 Austria</li><li>Jordania 1–2 Argelia</li>
+          <li>Argentina 3–1 Jordania</li><li>Argelia 3–3 Austria</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo K</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Colombia</td><td>7</td><td>4</td><td>1</td><td>+3</td></tr>
+          <tr class="q"><td>2</td><td>Portugal</td><td>5</td><td>6</td><td>1</td><td>+5</td></tr>
+          <tr class="q3"><td>3</td><td>RD Congo</td><td>4</td><td>4</td><td>3</td><td>+1</td></tr>
+          <tr><td>4</td><td>Uzbekistán</td><td>0</td><td>2</td><td>11</td><td>−9</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>Portugal 1–1 RD Congo</li><li>Uzbekistán 1–3 Colombia</li>
+          <li>Portugal 5–0 Uzbekistán</li><li>Colombia 1–0 RD Congo</li>
+          <li>Colombia 0–0 Portugal</li><li>RD Congo 3–1 Uzbekistán</li>
+        </ul></details>
+      </div>
+
+      <div class="group-card">
+        <div class="group-head"><span class="group-label">Grupo L</span></div>
+        <table><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead>
+        <tbody>
+          <tr class="q"><td>1</td><td>Inglaterra</td><td>7</td><td>6</td><td>2</td><td>+4</td></tr>
+          <tr class="q"><td>2</td><td>Croacia</td><td>6</td><td>5</td><td>5</td><td>0</td></tr>
+          <tr class="q3"><td>3</td><td>Ghana</td><td>4</td><td>2</td><td>2</td><td>0</td></tr>
+          <tr><td>4</td><td>Panamá</td><td>0</td><td>0</td><td>4</td><td>−4</td></tr>
+        </tbody></table>
+        <details><summary>Ver los 6 partidos</summary><ul class="matchlist">
+          <li>Inglaterra 4–2 Croacia</li><li>Ghana 1–0 Panamá</li>
+          <li>Inglaterra 0–0 Ghana</li><li>Panamá 0–1 Croacia</li>
+          <li>Inglaterra 2–0 Panamá</li><li>Croacia 2–1 Ghana</li>
+        </ul></details>
+      </div>
+
+    </div>
+
+    <div class="thirds-note">
+      <b>Mejores terceros clasificados</b> (dorado = pasa): RD Congo, Suecia, Ecuador, Ghana, Bosnia y Herzegovina, Argelia, Paraguay, Senegal.
+      Quedaron fuera por diferencia de gol: Corea del Sur, Escocia, Irán y Uruguay.
+    </div>
+  </section>
+
+  <section id="dieciseisavos">
+    <div class="section-head"><span class="section-num">02</span><h2>Dieciseisavos de final — Round of 32</h2></div>
+    <p class="section-desc">Diez cruces ya se jugaron entre el 28 de junio y el 1 de julio. Los seis restantes se disputan hoy 2 de julio y mañana 3 de julio — para esos aplico el modelo de predicción.</p>
+    <div class="legend"><span><i class="dot real"></i>Resultado real</span><span><i class="dot pred"></i>Predicción</span></div>
+
+    <div class="match-grid">
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">28 jun · Los Ángeles</span></div>
+        <div class="team win"><span class="name">Canadá</span><span class="score">1</span></div>
+        <div class="team"><span class="name">Sudáfrica</span><span class="score">0</span></div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">29 jun · Houston</span></div>
+        <div class="team win"><span class="name">Brasil</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Japón</span><span class="score">1</span></div>
+        <div class="match-extra">Gol de Martinelli, minuto 96</div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">29 jun · Foxborough</span></div>
+        <div class="team win"><span class="name">Paraguay</span><span class="score">1 (4)</span></div>
+        <div class="team"><span class="name">Alemania</span><span class="score">1 (3)</span></div>
+        <div class="match-extra">Empate 1–1, Paraguay avanza por penales</div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">30 jun · Monterrey</span></div>
+        <div class="team win"><span class="name">Marruecos</span><span class="score">1 (3)</span></div>
+        <div class="team"><span class="name">Países Bajos</span><span class="score">1 (2)</span></div>
+        <div class="match-extra">Empate 1–1, Marruecos avanza por penales</div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">30 jun · Arlington</span></div>
+        <div class="team win"><span class="name">Noruega</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Costa de Marfil</span><span class="score">1</span></div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">30 jun · East Rutherford</span></div>
+        <div class="team win"><span class="name">Francia</span><span class="score">3</span></div>
+        <div class="team"><span class="name">Suecia</span><span class="score">0</span></div>
+        <div class="match-extra">Doblete de Mbappé</div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">1 jul · Ciudad de México</span></div>
+        <div class="team win"><span class="name">México</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Ecuador</span><span class="score">0</span></div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">1 jul · Atlanta</span></div>
+        <div class="team win"><span class="name">Inglaterra</span><span class="score">2</span></div>
+        <div class="team"><span class="name">RD Congo</span><span class="score">1</span></div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">1 jul · Seattle</span></div>
+        <div class="team win"><span class="name">Bélgica</span><span class="score">3</span></div>
+        <div class="team"><span class="name">Senegal</span><span class="score">2</span></div>
+        <div class="match-extra">1–1 en 90&#39;, gana en prórroga (Tielemans, min. 125)</div>
+      </div>
+
+      <div class="match real">
+        <div class="match-meta"><span class="tag">Real</span><span class="date">1 jul · Santa Clara</span></div>
+        <div class="team win"><span class="name">Estados Unidos</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Bosnia y Herzegovina</span><span class="score">0</span></div>
+        <div class="match-extra">Goles de Balogun y Tillman; expulsión de Balogun, min. 64</div>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">2 jul · Los Ángeles</span></div>
+        <div class="team win"><span class="name">España</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Austria</span><span class="score">0</span></div>
+        <p class="note">España no ha encajado un gol en el torneo (0 en 3 partidos) y llega como la selección más sólida del cuadro. Austria compite bien pero le falta pegada arriba.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">2 jul · Toronto</span></div>
+        <div class="team win"><span class="name">Portugal</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Croacia</span><span class="score">1</span></div>
+        <p class="note">Cruce parejo entre dos semifinalistas recientes; la mayor profundidad de plantilla portuguesa decide un partido ajustado.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">2 jul · Vancouver</span></div>
+        <div class="team win"><span class="name">Suiza</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Argelia</span><span class="score">1</span></div>
+        <p class="note">Suiza llega como la selección más en forma de la fase de grupos (7 de 9 puntos posibles, +5 de gol average).</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">3 jul · Arlington</span></div>
+        <div class="team win"><span class="name">Egipto</span><span class="score">1</span></div>
+        <div class="team"><span class="name">Australia</span><span class="score">0</span></div>
+        <p class="note">Egipto (5 puntos, +2) llega con más ritmo ofensivo que una Australia sólida pero con poco gol.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">3 jul · Miami Gardens</span></div>
+        <div class="team win"><span class="name">Argentina</span><span class="score">3</span></div>
+        <div class="team"><span class="name">Cabo Verde</span><span class="score">0</span></div>
+        <p class="note">Argentina, número 1 del ranking FIFA, viene de la fase de grupos más dominante del torneo (9 de 9 puntos, +7). Cabo Verde, debutante histórico, llega sin margen de sobra.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">3 jul · Kansas City</span></div>
+        <div class="team win"><span class="name">Colombia</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Ghana</span><span class="score">0</span></div>
+        <p class="note">Colombia ganó un grupo exigente sin encajar apenas (1 gol en contra en 3 partidos) y entra como favorita clara.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="octavos">
+    <div class="section-head"><span class="section-num">03</span><h2>Octavos de final — Round of 16</h2></div>
+    <p class="section-desc">4–7 de julio. Todos los cruces dependen de resultados aún por jugarse, así que las ocho llaves completas son predicción.</p>
+    <div class="legend"><span><i class="dot pred"></i>Predicción — ninguno se ha jugado todavía</span></div>
+
+    <div class="match-grid">
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">4 jul · Philadelphia</span></div>
+        <div class="team win"><span class="name">Francia</span><span class="score">3</span></div>
+        <div class="team"><span class="name">Paraguay</span><span class="score">0</span></div>
+        <p class="note">Paraguay noqueó a Alemania por penales pero su bloque defensivo difícilmente contendrá a la Francia más letal del torneo (10 goles en fase de grupos).</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">4 jul · Houston</span></div>
+        <div class="team win"><span class="name">Marruecos</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Canadá</span><span class="score">1</span></div>
+        <p class="note">Marruecos llega afilado tras eliminar a Países Bajos; mejor nivel individual que el anfitrión canadiense.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">5 jul · East Rutherford</span></div>
+        <div class="team win"><span class="name">Brasil</span><span class="score">3</span></div>
+        <div class="team"><span class="name">Noruega</span><span class="score">1</span></div>
+        <p class="note">Noruega llega en buena racha, pero la profundidad ofensiva brasileña es de otro nivel.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">5 jul · Ciudad de México</span></div>
+        <div class="team win"><span class="name">Inglaterra</span><span class="score">2</span></div>
+        <div class="team"><span class="name">México</span><span class="score">1</span></div>
+        <p class="note">El partido más difícil de llamar del torneo: México con la localía a su favor, pero Inglaterra (ranking #4) tiene más recambio en ataque.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">6 jul · Arlington</span></div>
+        <div class="team win"><span class="name">España</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Portugal</span><span class="score">1</span></div>
+        <div class="match-extra">Prórroga</div>
+        <p class="note">Clásico ibérico de cuartos anticipado. España, invicta y sin goles en contra, tiene el margen justo para superar a Portugal en un partido cerrado.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">6 jul · Seattle</span></div>
+        <div class="team win"><span class="name">Bélgica</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Estados Unidos</span><span class="score">1</span></div>
+        <p class="note">EE. UU. jugará sin Balogun (expulsado ante Bosnia); esa baja pesa frente a una Bélgica con más nivel de plantilla.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">7 jul · por confirmar</span></div>
+        <div class="team win"><span class="name">Argentina</span><span class="score">3</span></div>
+        <div class="team"><span class="name">Egipto</span><span class="score">0</span></div>
+        <p class="note">Diferencia de nivel amplia: la mejor selección del ranking FIFA frente al segundo de un grupo modesto.</p>
+      </div>
+
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">7 jul · por confirmar</span></div>
+        <div class="team win"><span class="name">Colombia</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Suiza</span><span class="score">1</span></div>
+        <p class="note">Ambas llegan sólidas; el mayor talento individual colombiano decanta un cruce muy disputado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cuartos">
+    <div class="section-head"><span class="section-num">04</span><h2>Cuartos de final</h2></div>
+    <p class="section-desc">9–11 de julio.</p>
+    <div class="match-grid">
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">9 jul · Boston</span></div>
+        <div class="team win"><span class="name">Francia</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Marruecos</span><span class="score">1</span></div>
+        <div class="match-extra">Prórroga</div>
+        <p class="note">Revancha de la semifinal de Catar 2022. Francia, favorita, pero Marruecos vende cara la eliminación otra vez.</p>
+      </div>
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">10 jul · Los Ángeles</span></div>
+        <div class="team win"><span class="name">Brasil</span><span class="score">3</span></div>
+        <div class="team"><span class="name">Inglaterra</span><span class="score">2</span></div>
+        <p class="note">Partido de máxima intensidad entre dos candidatos reales al título; Brasil resuelve por detalles individuales.</p>
+      </div>
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">11 jul · Miami Gardens</span></div>
+        <div class="team win"><span class="name">España</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Bélgica</span><span class="score">0</span></div>
+        <p class="note">La selección más sólida defensivamente del torneo sigue sin encontrar freno.</p>
+      </div>
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">11 jul · Kansas City</span></div>
+        <div class="team win"><span class="name">Argentina</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Colombia</span><span class="score">1</span></div>
+        <p class="note">Clásico sudamericano; Argentina, número 1 del mundo y campeona vigente, se impone en un cruce parejo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="semis">
+    <div class="section-head"><span class="section-num">05</span><h2>Semifinales</h2></div>
+    <p class="section-desc">14 y 15 de julio.</p>
+    <div class="match-grid">
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">14 jul · Arlington</span></div>
+        <div class="team win"><span class="name">Francia</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Brasil</span><span class="score">1</span></div>
+        <p class="note">Choque de gigantes; Mbappé en el mejor momento del torneo inclina la balanza.</p>
+      </div>
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">15 jul · Atlanta</span></div>
+        <div class="team win"><span class="name">Argentina</span><span class="score">1 (5)</span></div>
+        <div class="team"><span class="name">España</span><span class="score">1 (4)</span></div>
+        <div class="match-extra">Empate 1–1 en prórroga, Argentina avanza por penales</div>
+        <p class="note">El duelo más parejo posible del torneo entre el número 1 y el número 2 del ranking FIFA. Se define por penales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="final">
+    <div class="section-head"><span class="section-num">06</span><h2>Tercer puesto y Gran Final</h2></div>
+    <p class="section-desc">18 y 19 de julio, Miami y East Rutherford (Nueva Jersey).</p>
+    <div class="match-grid">
+      <div class="match pred">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">18 jul · Miami · Tercer puesto</span></div>
+        <div class="team win"><span class="name">España</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Brasil</span><span class="score">1</span></div>
+      </div>
+      <div class="match pred final-card">
+        <div class="match-meta"><span class="tag">Predicción</span><span class="date">19 jul · MetLife Stadium, NJ · Final</span></div>
+        <div class="team win"><span class="name">Argentina</span><span class="score">2</span></div>
+        <div class="team"><span class="name">Francia</span><span class="score">1</span></div>
+        <p class="note">Repite la final de Qatar 2022. Argentina, invicta, número 1 del ranking y con la mejor defensa del cuadro americano, se corona bicampeona.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="methodology" id="metodologia">
+    <h3>Metodología</h3>
+    <p>Los resultados de la fase de grupos completa (72 partidos) y los diez cruces de dieciseisavos jugados entre el 28 de junio y el 1 de julio son datos reales, contrastados en múltiples fuentes (ESPN, Yahoo Sports, Sky Sports, CBS Sports, FIFA.com, Wikipedia).</p>
+    <p>A partir del 2 de julio, cada resultado marcado como <b style="color:var(--predict)">Predicción</b> se estimó combinando:</p>
+    <ul>
+      <li>Ranking FIFA vigente (última actualización: 11 de junio de 2026).</li>
+      <li>Rendimiento real mostrado en el torneo: goles a favor/en contra, solidez defensiva y estado de forma en fase de grupos y dieciseisavos.</li>
+      <li>Bajas relevantes por lesión o sanción (por ejemplo, la expulsión de Balogun en EE. UU.).</li>
+      <li>Estructura oficial del cuadro de eliminación directa (fechas y sedes confirmadas por la organización para cada ronda).</li>
+    </ul>
+    <p>Ninguna predicción es un hecho: en un torneo de 48 equipos las sorpresas son la norma, como ya demostró la eliminación de Alemania a manos de Paraguay. Estas proyecciones reflejan el escenario más probable según los datos disponibles hoy, no un resultado garantizado.</p>
+  </div>
+
+</div>
