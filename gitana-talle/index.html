@@ -1,0 +1,198 @@
+<title>Encontrá tu talle — Gitana Jeans</title>
+<style>
+  @charset "UTF-8";
+
+  :root {
+    --paper: #ffffff;
+    --ink: #141414;
+    --muted: #767676;
+    --accent: #e8007d;
+    --line: #dcdcdc;
+    --chip-bg: #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #141414; --ink: #f2f2f2; --muted: #9a9a9a; --accent: #ff3d96; --line: #3a3a3a; --chip-bg: #1e1e1e; }
+  }
+  :root[data-theme="dark"] { --paper: #141414; --ink: #f2f2f2; --muted: #9a9a9a; --accent: #ff3d96; --line: #3a3a3a; --chip-bg: #1e1e1e; }
+  :root[data-theme="light"] { --paper: #ffffff; --ink: #141414; --muted: #767676; --accent: #e8007d; --line: #dcdcdc; --chip-bg: #ffffff; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .widget { max-width: 26rem; margin: 0 auto; padding: 1.25rem; }
+
+  .label {
+    display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em;
+    text-transform: uppercase; color: var(--ink); margin-bottom: 0.7rem;
+  }
+
+  .chip-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .chip-row input { position: absolute; opacity: 0; pointer-events: none; }
+  .chip-row label {
+    display: block; text-align: center; padding: 0.6rem 0.3rem;
+    border: 1px solid var(--line); background: var(--chip-bg); border-radius: 4px;
+    font-size: 0.9375rem; font-variant-numeric: tabular-nums; font-weight: 600;
+    color: var(--ink); cursor: pointer;
+  }
+  .chip-row input:checked + label { border: 2px solid var(--ink); padding: calc(0.6rem - 1px) calc(0.3rem - 1px); }
+
+  .reveal { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+  #s34:checked ~ .reveal, #s36:checked ~ .reveal, #s38:checked ~ .reveal,
+  #s40:checked ~ .reveal, #s42:checked ~ .reveal, #s44:checked ~ .reveal { display: block; }
+
+  .result-line { margin: 0 0 0.75rem; font-size: 0.9375rem; color: var(--ink); }
+  .result-line b { color: var(--accent); font-size: 1.125rem; }
+
+  .reveal .out { display: none; }
+  #s34:checked ~ .reveal .out-34, #s36:checked ~ .reveal .out-36, #s38:checked ~ .reveal .out-38,
+  #s40:checked ~ .reveal .out-40, #s42:checked ~ .reveal .out-42, #s44:checked ~ .reveal .out-44 { display: inline; }
+  #s34:checked ~ .reveal a.out-34, #s36:checked ~ .reveal a.out-36, #s38:checked ~ .reveal a.out-38,
+  #s40:checked ~ .reveal a.out-40, #s42:checked ~ .reveal a.out-42, #s44:checked ~ .reveal a.out-44 { display: block; }
+
+  .cta-btn {
+    display: block; text-align: center; text-decoration: none;
+    background: var(--accent); color: #fff; font-weight: 700; font-size: 0.875rem;
+    padding: 0.7rem 1rem; border-radius: 4px;
+  }
+
+  .tiny { font-size: 0.75rem; color: var(--muted); margin: 0.6rem 0 0; text-align: center; }
+
+  .wa-btn {
+    display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+    text-decoration: none; background: #25d366; color: #fff; font-weight: 700;
+    font-size: 0.875rem; padding: 0.65rem 1rem; border-radius: 4px; margin-top: 1rem;
+  }
+  .wa-btn svg { width: 1rem; height: 1rem; fill: #fff; flex-shrink: 0; }
+
+  details.alt { margin-top: 0.85rem; }
+  details.alt > summary {
+    cursor: pointer; list-style: none; font-size: 0.8125rem; color: var(--muted);
+    text-decoration: underline; padding: 0.2rem 0;
+  }
+  details.alt > summary::-webkit-details-marker { display: none; }
+  details.alt > .inner { padding-top: 0.85rem; }
+
+  .m-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.4rem; }
+  .m-row .v { font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+  input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 1.5rem; background: transparent; margin: 0; cursor: pointer; }
+  input[type="range"]::-webkit-slider-runnable-track { height: 4px; background: var(--line); }
+  input[type="range"]::-moz-range-track { height: 4px; background: var(--line); }
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; margin-top: -8px; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); }
+  input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--ink); border: none; }
+
+  table.chart { width: 100%; border-collapse: collapse; font-size: 0.8125rem; }
+  table.chart th, table.chart td { padding: 0.45rem 0.3rem; text-align: center; font-variant-numeric: tabular-nums; }
+  table.chart th { font-size: 0.6875rem; color: var(--muted); font-weight: 700; border-bottom: 1px solid var(--line); }
+  table.chart td { border-bottom: 1px solid var(--line); color: var(--ink); }
+  table.chart td:first-child, table.chart th:first-child { text-align: left; }
+  table.chart tr:last-child td { border-bottom: none; }
+  .table-scroll { overflow-x: auto; }
+</style>
+
+<div class="widget">
+  <span class="label">¿Qué talle usás normalmente?</span>
+
+  <input type="radio" name="marca" id="s34"><input type="radio" name="marca" id="s36"><input type="radio" name="marca" id="s38"><input type="radio" name="marca" id="s40"><input type="radio" name="marca" id="s42"><input type="radio" name="marca" id="s44">
+
+  <div class="chip-row">
+    <label for="s34">24 / 34</label>
+    <label for="s36">26 / 36</label>
+    <label for="s38">28 / 38</label>
+    <label for="s40">30 / 40</label>
+    <label for="s42">32 / 42</label>
+    <label for="s44">34 / 44</label>
+  </div>
+
+  <div class="reveal">
+    <p class="result-line">
+      Tu talle Gitana es
+      <b class="out out-34">40</b><b class="out out-36">42</b><b class="out out-38">44</b>
+      <b class="out out-40">46</b><b class="out out-42">48</b><b class="out out-44">50</b>
+    </p>
+
+    <a class="cta-btn out out-34" href="https://gitanajeans.mitiendanube.com/productos/?Talle=34+Otras+Marcas%3D40+Gitana+Jeans">Ver jeans en talle 40</a>
+    <a class="cta-btn out out-36" href="https://gitanajeans.mitiendanube.com/productos/?Talle=36+Otras+Marcas%3D42+Gitana+Jeans">Ver jeans en talle 42</a>
+    <a class="cta-btn out out-38" href="https://gitanajeans.mitiendanube.com/productos/?Talle=38+Otras+Marcas%3D44+Gitana+Jeans">Ver jeans en talle 44</a>
+    <a class="cta-btn out out-40" href="https://gitanajeans.mitiendanube.com/productos/?Talle=40+Otras+Marcas%3D46+Gitana+Jeans">Ver jeans en talle 46</a>
+    <a class="cta-btn out out-42" href="https://gitanajeans.mitiendanube.com/productos/?Talle=42+Otras+Marcas%3D48+Gitana+Jeans">Ver jeans en talle 48</a>
+    <a class="cta-btn out out-44" href="https://gitanajeans.mitiendanube.com/productos/?Talle=44+Otras+Marcas%3D50+Gitana+Jeans">Ver jeans en talle 50</a>
+
+    <p class="tiny">30 días para cambiarlo si no es tu talle</p>
+  </div>
+
+  <details class="alt">
+    <summary>No conozco mi talle en otras marcas, prefiero medirme</summary>
+    <div class="inner">
+      <div class="m-row"><span>Tu cintura</span><span class="v"><span id="cm-out">72</span> cm</span></div>
+      <input type="range" id="slider" min="58" max="90" step="1" value="72">
+      <div class="m-row" style="margin-top:0.6rem;">
+        <span>Talle Gitana sugerido</span>
+        <span class="v" id="talle-out" style="color:var(--accent); font-size:0.9375rem;">44</span>
+      </div>
+      <a class="cta-btn" id="slider-cta" href="#" style="margin-top:0.75rem;">Ver jeans en talle 44</a>
+      <p class="tiny">Medí la parte más angosta de tu cintura, sin ropa ajustada.</p>
+    </div>
+  </details>
+
+  <details class="alt">
+    <summary>Ver tabla completa de talles</summary>
+    <div class="inner table-scroll">
+      <table class="chart">
+        <thead><tr><th>Otras marcas</th><th>Gitana</th><th>Cintura</th><th>Cadera</th></tr></thead>
+        <tbody>
+          <tr><td>34</td><td>40</td><td>64</td><td>90</td></tr>
+          <tr><td>36</td><td>42</td><td>68</td><td>94</td></tr>
+          <tr><td>38</td><td>44</td><td>72</td><td>98</td></tr>
+          <tr><td>40</td><td>46</td><td>76</td><td>102</td></tr>
+          <tr><td>42</td><td>48</td><td>80</td><td>106</td></tr>
+          <tr><td>44</td><td>50</td><td>84</td><td>110</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <a class="wa-btn" href="https://wa.me/542236882410?text=Hola%2C%20tengo%20una%20duda%20con%20mi%20talle" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18a7.93 7.93 0 0 1-4.05-1.11l-.29-.17-3.01.79.8-2.94-.19-.3A7.95 7.95 0 1 1 12 20Zm4.36-5.96c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.63-1.18-1.4-1.31-1.64-.14-.24-.01-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28Z"/></svg>
+    ¿Dudas con tu talle? Escribinos
+  </a>
+</div>
+
+<script>
+(function () {
+  var CHART = [
+    { cintura: 64, talle: 40, otras: 34 }, { cintura: 68, talle: 42, otras: 36 },
+    { cintura: 72, talle: 44, otras: 38 }, { cintura: 76, talle: 46, otras: 40 },
+    { cintura: 80, talle: 48, otras: 42 }, { cintura: 84, talle: 50, otras: 44 }
+  ];
+  var MIN = 58, MAX = 90, CATALOG = 'https://gitanajeans.mitiendanube.com/productos/';
+
+  var slider = document.getElementById('slider');
+  var cmOut = document.getElementById('cm-out');
+  var talleOut = document.getElementById('talle-out');
+  var sliderCta = document.getElementById('slider-cta');
+
+  function sizeForCintura(cm) {
+    for (var i = 0; i < CHART.length; i++) { if (cm <= CHART[i].cintura) return CHART[i]; }
+    return CHART[CHART.length - 1];
+  }
+
+  function update(cm) {
+    cm = Math.min(Math.max(cm, MIN), MAX);
+    cmOut.textContent = cm;
+    var row = sizeForCintura(cm);
+    talleOut.textContent = row.talle;
+    sliderCta.textContent = 'Ver jeans en talle ' + row.talle;
+    sliderCta.href = CATALOG + '?Talle=' + row.otras + '+Otras+Marcas%3D' + row.talle + '+Gitana+Jeans';
+  }
+
+  slider.addEventListener('input', function () { update(parseInt(slider.value, 10)); });
+  update(parseInt(slider.value, 10));
+})();
+</script>
