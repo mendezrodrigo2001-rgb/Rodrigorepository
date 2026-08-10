@@ -10,14 +10,27 @@ Uso:
 --columna-stock-dux: nombre exacto de la columna de stock de la sucursal a
 conciliar dentro del export de Dux (ej. "JBJ DEPOSITO", "GENERAL", etc.)
 
+Opciones para ajustar que se corrige:
+    --excluir-rubro JEANS OTRO_RUBRO   -> no toca el stock de esos rubros,
+                                           queda igual que estaba en Dux
+    --piso-cero                        -> si el stock real es negativo, en
+                                           dux_stock_corregido.xlsx se carga 0
+                                           en vez del numero negativo
+    --ignorar-faltantes-en-dux         -> (default) no se generan altas para
+                                           productos que no existen en Dux,
+                                           solo se listan en faltantes_en_dux.xlsx
+
 Salidas (en la carpeta actual):
-    conciliacion_completa.xlsx      -> todos los productos, con estado
+    conciliacion_completa.xlsx      -> todos los productos, con estado y que
+                                        se aplico realmente en el corregido
     dux_stock_corregido.xlsx        -> mismo formato que el export de Dux,
                                         con la columna de stock corregida
                                         segun el stock real (solo productos
-                                        que ya existen en Dux)
+                                        que ya existen en Dux, respetando
+                                        exclusiones)
     faltantes_en_dux.xlsx           -> productos con stock real pero que no
-                                        existen en Dux (para darlos de alta)
+                                        existen en Dux (informativo, no se
+                                        crean automaticamente)
     faltantes_en_nube.xlsx          -> productos en Dux que no aparecen en
                                         el archivo de stock real (para revisar)
 """
@@ -57,7 +70,11 @@ def main():
     parser.add_argument("--dux", required=True, type=Path, help="Export de Dux 'Consulta de Precios y Stock' (.xls/.xlsx)")
     parser.add_argument("--nube", required=True, type=Path, help="Export de stock real tipo 'articulos_nube' (.xlsx/.csv)")
     parser.add_argument("--columna-stock-dux", default="JBJ DEPOSITO", help="Columna de stock de la sucursal en el export de Dux")
+    parser.add_argument("--excluir-rubro", nargs="*", default=[], help="Rubros (categorias) a NO tocar, ej. JEANS")
+    parser.add_argument("--piso-cero", action="store_true", help="Si el stock real es negativo, aplicar 0 en vez del negativo")
     args = parser.parse_args()
+
+    excluir_rubros = {r.strip().upper() for r in args.excluir_rubro}
 
     fila_header = detectar_fila_encabezado_dux(args.dux)
     dux = pd.read_excel(args.dux, header=fila_header, dtype=str)
@@ -85,32 +102,41 @@ def main():
     nube["_en_nube"] = 1
 
     merge = pd.merge(
-        dux[["Código", "Producto", "Talle", "Color", args.columna_stock_dux, "Código Barra", "_en_dux"]],
-        nube[["SKU", "NOMBRE", "TALLE", "STOCK", "_en_nube"]],
+        dux[["Código", "Producto", "Talle", "Color", "Rubro", args.columna_stock_dux, "Código Barra", "_en_dux"]],
+        nube[["SKU", "NOMBRE", "CATEGORIA", "TALLE", "STOCK", "_en_nube"]],
         left_on="Código", right_on="SKU", how="outer",
     )
 
     merge["Código"] = merge["Código"].fillna(merge["SKU"])
+    merge["Rubro"] = merge["Rubro"].fillna(merge["CATEGORIA"])
     merge["Stock Dux"] = a_numero(merge[args.columna_stock_dux])
     merge["Stock Real"] = a_numero(merge["STOCK"])
     merge["Diferencia"] = merge["Stock Real"] - merge["Stock Dux"]
     merge["Estado"] = merge.apply(clasificar, axis=1)
     merge["Stock Negativo"] = merge["Stock Real"] < 0
 
+    es_rubro_excluido = merge["Rubro"].astype(str).str.strip().str.upper().isin(excluir_rubros)
+    merge["Stock Aplicado"] = merge["Stock Real"]
+    if args.piso_cero:
+        merge.loc[merge["Stock Aplicado"] < 0, "Stock Aplicado"] = 0
+
+    # Se aplica al corregido solo si: existe en Dux, existe en nube (dato real), y no es rubro excluido.
+    merge["Se Aplico"] = merge["_en_dux"].notna() & merge["Stock Real"].notna() & ~es_rubro_excluido
+
     columnas_finales = [
-        "Código", "Producto", "NOMBRE", "Talle", "TALLE", "Color", "Código Barra",
-        "Stock Dux", "Stock Real", "Diferencia", "Estado", "Stock Negativo",
+        "Código", "Producto", "NOMBRE", "Talle", "TALLE", "Color", "Rubro", "Código Barra",
+        "Stock Dux", "Stock Real", "Stock Aplicado", "Diferencia", "Estado", "Stock Negativo", "Se Aplico",
     ]
     conciliacion = merge[columnas_finales].sort_values(["Estado", "Código"])
     conciliacion.to_excel("conciliacion_completa.xlsx", index=False)
 
     # Dux corregido: mismo formato del export original, solo se pisa la
-    # columna de stock de la sucursal para los codigos que existen en Dux.
+    # columna de stock de la sucursal donde "Se Aplico" es True.
     dux_corregido = dux.drop(columns=["_en_dux"]).copy()
-    stock_real_por_codigo = merge.set_index("Código")["Stock Real"]
-    mask_con_dato_real = dux_corregido["Código"].isin(stock_real_por_codigo.dropna().index)
+    stock_aplicado_por_codigo = merge.set_index("Código")["Stock Aplicado"].where(merge.set_index("Código")["Se Aplico"])
+    mask_con_dato_real = dux_corregido["Código"].isin(stock_aplicado_por_codigo.dropna().index)
     dux_corregido.loc[mask_con_dato_real, args.columna_stock_dux] = (
-        dux_corregido.loc[mask_con_dato_real, "Código"].map(stock_real_por_codigo).astype("Int64").astype(str)
+        dux_corregido.loc[mask_con_dato_real, "Código"].map(stock_aplicado_por_codigo).astype("Int64").astype(str)
     )
     dux_corregido.to_excel("dux_stock_corregido.xlsx", index=False)
 
@@ -122,18 +148,23 @@ def main():
 
     resumen = conciliacion["Estado"].value_counts()
     negativos = int(conciliacion["Stock Negativo"].sum())
+    excluidos = int(es_rubro_excluido.sum())
+    aplicados = int(merge["Se Aplico"].sum())
 
     print("=== Resumen de conciliacion ===")
     for estado, cantidad in resumen.items():
         print(f"  {estado}: {cantidad}")
     print(f"  Con stock real NEGATIVO: {negativos}")
+    if excluir_rubros:
+        print(f"  Excluidos por rubro {sorted(excluir_rubros)}: {excluidos} (no se les toco el stock)")
+    print(f"  Stock efectivamente actualizado en dux_stock_corregido.xlsx: {aplicados}")
     if duplicados_exactos:
         print(f"  Aviso: se descartaron {duplicados_exactos} filas duplicadas exactas en el archivo de nube.")
     print()
     print("Archivos generados:")
-    print("  conciliacion_completa.xlsx  (todo, con columna Estado)")
+    print("  conciliacion_completa.xlsx  (todo, con columnas Estado / Se Aplico / Stock Aplicado)")
     print("  dux_stock_corregido.xlsx    (mismo formato del export de Dux, stock corregido)")
-    print("  faltantes_en_dux.xlsx       (productos con stock real que no existen en Dux)")
+    print("  faltantes_en_dux.xlsx       (productos con stock real que no existen en Dux, no se crean)")
     print("  faltantes_en_nube.xlsx      (productos en Dux que no aparecen en el stock real)")
 
 
