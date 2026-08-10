@@ -3,7 +3,11 @@
 Generador de SKU y codigo de barra (EAN-13) para productos nuevos de Gitana Jeans,
 listos para importar a Dux Software.
 
+El SKU es un correlativo numerico simple que continua la numeracion que ya
+usa Dux (ver inicializar_correlativo.py para fijar desde donde arrancar).
+
 Uso:
+    python inicializar_correlativo.py export_productos_dux.xlsx   # una sola vez / cuando quieras resincronizar
     python generar_codigos.py entrada.xlsx
     python generar_codigos.py entrada.csv
 
@@ -14,7 +18,6 @@ Archivo de entrada esperado (columnas, sin importar mayusculas/orden):
     Talle     -> ej "46"
 
 Columnas opcionales:
-    ColorCodigo -> abreviatura de color a usar en el SKU (si no, se genera sola)
     SKU / CodigoBarra -> si ya vienen completos en una fila, no se pisan
 
 Salida:
@@ -25,18 +28,21 @@ Registro persistente:
     registro_codigos.csv (en esta misma carpeta) guarda la asignacion
     Modelo+Color+Talle -> SKU/CodigoBarra para que el mismo producto
     siempre reciba el mismo codigo, incluso corriendo el script varias veces.
+
+    correlativo_sku.json guarda el proximo numero de SKU a asignar (lo
+    genera/actualiza inicializar_correlativo.py a partir de un export de Dux).
 """
 
 import csv
-import re
+import json
 import sys
-import unicodedata
 from pathlib import Path
 
 import pandas as pd
 
 CARPETA = Path(__file__).parent
 REGISTRO_PATH = CARPETA / "registro_codigos.csv"
+CORRELATIVO_PATH = CARPETA / "correlativo_sku.json"
 
 PREFIJO_INTERNO = "20"  # rango 20-29 de EAN-13 reservado para uso interno/in-store
 LARGO_CUERPO = 10  # digitos entre el prefijo y el digito verificador (12 - len(prefijo))
@@ -44,19 +50,26 @@ LARGO_CUERPO = 10  # digitos entre el prefijo y el digito verificador (12 - len(
 REGISTRO_COLUMNAS = ["Modelo", "Color", "Talle", "SKU", "CodigoBarra"]
 
 
-def quitar_acentos(texto: str) -> str:
-    nfkd = unicodedata.normalize("NFKD", texto)
-    return "".join(c for c in nfkd if not unicodedata.combining(c))
-
-
-def abreviar_color(color: str) -> str:
-    limpio = quitar_acentos(str(color)).upper()
-    letras = re.sub(r"[^A-Z]", "", limpio)
-    return letras[:3] if letras else "COL"
-
-
 def normalizar_talle(talle) -> str:
     return str(talle).strip().upper()
+
+
+def cargar_correlativo_sku() -> dict:
+    if CORRELATIVO_PATH.exists():
+        with open(CORRELATIVO_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    print(
+        "No encontre correlativo_sku.json. Corre primero:\n"
+        "    python inicializar_correlativo.py <export_de_productos_dux.xlsx>\n"
+        "para fijar desde que numero debe seguir el SKU. "
+        "Por ahora arranco desde 1 (ancho 6 digitos)."
+    )
+    return {"siguiente": 1, "ancho": 6}
+
+
+def guardar_correlativo_sku(estado: dict):
+    with open(CORRELATIVO_PATH, "w", encoding="utf-8") as f:
+        json.dump(estado, f, indent=2)
 
 
 def calcular_digito_verificador(cuerpo_12_digitos: str) -> str:
@@ -142,7 +155,10 @@ def main():
     if "CodigoBarra" not in df.columns:
         df["CodigoBarra"] = ""
 
-    registro, correlativo = cargar_registro()
+    registro, correlativo_barra = cargar_registro()
+    estado_sku = cargar_correlativo_sku()
+    siguiente_sku = estado_sku["siguiente"]
+    ancho_sku = estado_sku["ancho"]
     generados = 0
     reutilizados = 0
 
@@ -163,10 +179,10 @@ def main():
             sku, barcode = registro[clave]
             reutilizados += 1
         else:
-            color_codigo = str(fila.get("ColorCodigo", "")).strip() or abreviar_color(color)
-            sku = f"{modelo}-{color_codigo}-{talle}"
-            barcode = generar_ean13(correlativo)
-            correlativo += 1
+            sku = str(siguiente_sku).zfill(ancho_sku)
+            siguiente_sku += 1
+            barcode = generar_ean13(correlativo_barra)
+            correlativo_barra += 1
             registro[clave] = (sku, barcode)
             generados += 1
 
@@ -174,6 +190,7 @@ def main():
         df.at[idx, "CodigoBarra"] = barcode
 
     guardar_registro(registro)
+    guardar_correlativo_sku({"siguiente": siguiente_sku, "ancho": ancho_sku})
     salida = escribir_salida(df, path_entrada)
 
     print(f"Listo. Codigos nuevos generados: {generados}. Reutilizados de productos existentes: {reutilizados}.")
