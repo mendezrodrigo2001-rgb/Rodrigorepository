@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Generador de SKU y codigo de barra (EAN-13) para productos nuevos de Gitana Jeans,
-listos para importar a Dux Software.
+Generador de SKU (CODIGO) y codigo de barra (COD BARRA, formato EAN-13) para
+productos nuevos de Gitana Jeans, sobre la plantilla real de importacion
+masiva de Dux Software.
 
 El SKU es un correlativo numerico simple que continua la numeracion que ya
 usa Dux (ver inicializar_correlativo.py para fijar desde donde arrancar).
@@ -11,23 +12,30 @@ Uso:
     python generar_codigos.py entrada.xlsx
     python generar_codigos.py entrada.csv
 
-Archivo de entrada esperado (columnas, sin importar mayusculas/orden):
-    Modelo    -> codigo de estilo, ej "5137"
-    Producto  -> nombre del producto, ej "JEANS OXFORD MONTREAL"
-    Color     -> ej "AZUL"
-    Talle     -> ej "46"
+Funciona con dos formatos de entrada:
+
+1. Plantilla real de Dux (recomendado): cualquier archivo con las columnas
+   de la plantilla de importacion masiva de Dux. Solo hacen falta las
+   columnas CODIGO, COD BARRA y PRODUCTO (el resto de las columnas de la
+   plantilla se dejan como esten). Cada fila con PRODUCTO distinto se toma
+   como un producto/variante distinto.
+
+2. Formato simplificado (compatibilidad hacia atras): columnas Modelo,
+   Producto, Color, Talle, con columnas de salida SKU / CodigoBarra.
 
 Columnas opcionales:
-    SKU / CodigoBarra -> si ya vienen completos en una fila, no se pisan
+    CODIGO/SKU y COD BARRA/CodigoBarra -> si una fila ya los trae
+    completos, no se pisan.
 
 Salida:
     <entrada>_con_codigos.xlsx (o .csv, segun el formato de entrada)
-    con las columnas SKU y CodigoBarra completadas.
+    con las columnas de codigo completadas.
 
 Registro persistente:
     registro_codigos.csv (en esta misma carpeta) guarda la asignacion
-    Modelo+Color+Talle -> SKU/CodigoBarra para que el mismo producto
-    siempre reciba el mismo codigo, incluso corriendo el script varias veces.
+    de cada producto/variante -> SKU/CodigoBarra para que el mismo
+    producto siempre reciba el mismo codigo, incluso corriendo el
+    script varias veces.
 
     correlativo_sku.json guarda el proximo numero de SKU a asignar (lo
     genera/actualiza inicializar_correlativo.py a partir de un export de Dux).
@@ -47,11 +55,39 @@ CORRELATIVO_PATH = CARPETA / "correlativo_sku.json"
 PREFIJO_INTERNO = "20"  # rango 20-29 de EAN-13 reservado para uso interno/in-store
 LARGO_CUERPO = 10  # digitos entre el prefijo y el digito verificador (12 - len(prefijo))
 
-REGISTRO_COLUMNAS = ["Modelo", "Color", "Talle", "SKU", "CodigoBarra"]
+REGISTRO_COLUMNAS = ["Clave", "SKU", "CodigoBarra"]
+
+# Distintos nombres posibles de columna, en orden de preferencia. El primero
+# que exista en el archivo se usa; si ninguno existe, se crea el primero.
+CANDIDATOS_COLUMNA_SKU = ["CODIGO", "SKU"]
+CANDIDATOS_COLUMNA_BARRA = ["COD BARRA", "CODIGO DE BARRA", "CodigoBarra"]
 
 
-def normalizar_talle(talle) -> str:
-    return str(talle).strip().upper()
+def resolver_columna(df: pd.DataFrame, candidatos: list[str]) -> str:
+    columnas_normalizadas = {c.strip().upper(): c for c in df.columns}
+    for candidato in candidatos:
+        if candidato.strip().upper() in columnas_normalizadas:
+            return columnas_normalizadas[candidato.strip().upper()]
+    nombre_nuevo = candidatos[0]
+    df[nombre_nuevo] = ""
+    return nombre_nuevo
+
+
+def construir_clave(fila: pd.Series, columnas: list[str]) -> str:
+    """Identidad unica de la fila: Modelo+Color+Talle si existen, si no PRODUCTO."""
+    if {"Modelo", "Color", "Talle"}.issubset(columnas):
+        return "|".join([
+            str(fila["Modelo"]).strip(),
+            str(fila["Color"]).strip(),
+            str(fila["Talle"]).strip().upper(),
+        ])
+    if "PRODUCTO" in columnas:
+        return str(fila["PRODUCTO"]).strip().upper()
+    raise ValueError(
+        "El archivo de entrada necesita columnas Modelo+Color+Talle, "
+        "o una columna PRODUCTO (formato plantilla Dux), para poder "
+        "identificar cada producto de forma unica."
+    )
 
 
 def cargar_correlativo_sku() -> dict:
@@ -99,8 +135,7 @@ def cargar_registro():
         with open(REGISTRO_PATH, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for fila in reader:
-                clave = (fila["Modelo"], fila["Color"], fila["Talle"])
-                registro[clave] = (fila["SKU"], fila["CodigoBarra"])
+                registro[fila["Clave"]] = (fila["SKU"], fila["CodigoBarra"])
                 cuerpo = fila["CodigoBarra"][len(PREFIJO_INTERNO):-1]
                 try:
                     siguiente_correlativo = max(siguiente_correlativo, int(cuerpo) + 1)
@@ -113,8 +148,8 @@ def guardar_registro(registro: dict):
     with open(REGISTRO_PATH, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(REGISTRO_COLUMNAS)
-        for (modelo, color, talle), (sku, barcode) in registro.items():
-            writer.writerow([modelo, color, talle, sku, barcode])
+        for clave, (sku, barcode) in registro.items():
+            writer.writerow([clave, sku, barcode])
 
 
 def leer_entrada(path: Path) -> pd.DataFrame:
@@ -124,8 +159,9 @@ def leer_entrada(path: Path) -> pd.DataFrame:
 
 
 def escribir_salida(df: pd.DataFrame, path_entrada: Path):
-    salida = path_entrada.with_name(path_entrada.stem + "_con_codigos" + path_entrada.suffix)
-    if path_entrada.suffix.lower() == ".csv":
+    sufijo = path_entrada.suffix if path_entrada.suffix.lower() in (".csv", ".xlsx") else ".xlsx"
+    salida = path_entrada.with_name(path_entrada.stem + "_con_codigos" + sufijo)
+    if sufijo == ".csv":
         df.to_csv(salida, index=False)
     else:
         df.to_excel(salida, index=False)
@@ -134,7 +170,7 @@ def escribir_salida(df: pd.DataFrame, path_entrada: Path):
 
 def main():
     if len(sys.argv) != 2:
-        print("Uso: python generar_codigos.py <archivo_entrada.xlsx|.csv>")
+        print("Uso: python generar_codigos.py <archivo_entrada.xlsx|.xls|.csv>")
         sys.exit(1)
 
     path_entrada = Path(sys.argv[1])
@@ -144,16 +180,8 @@ def main():
 
     df = leer_entrada(path_entrada)
 
-    columnas_requeridas = {"Modelo", "Color", "Talle"}
-    faltantes = columnas_requeridas - set(df.columns)
-    if faltantes:
-        print(f"Faltan columnas obligatorias en el archivo de entrada: {sorted(faltantes)}")
-        sys.exit(1)
-
-    if "SKU" not in df.columns:
-        df["SKU"] = ""
-    if "CodigoBarra" not in df.columns:
-        df["CodigoBarra"] = ""
+    col_sku = resolver_columna(df, CANDIDATOS_COLUMNA_SKU)
+    col_barra = resolver_columna(df, CANDIDATOS_COLUMNA_BARRA)
 
     registro, correlativo_barra = cargar_registro()
     estado_sku = cargar_correlativo_sku()
@@ -163,13 +191,10 @@ def main():
     reutilizados = 0
 
     for idx, fila in df.iterrows():
-        modelo = str(fila["Modelo"]).strip()
-        color = str(fila["Color"]).strip()
-        talle = normalizar_talle(fila["Talle"])
-        clave = (modelo, color, talle)
+        clave = construir_clave(fila, list(df.columns))
 
-        sku_actual = str(fila.get("SKU", "")).strip()
-        barcode_actual = str(fila.get("CodigoBarra", "")).strip()
+        sku_actual = str(fila.get(col_sku, "")).strip()
+        barcode_actual = str(fila.get(col_barra, "")).strip()
 
         if sku_actual and barcode_actual:
             registro[clave] = (sku_actual, barcode_actual)
@@ -186,8 +211,8 @@ def main():
             registro[clave] = (sku, barcode)
             generados += 1
 
-        df.at[idx, "SKU"] = sku
-        df.at[idx, "CodigoBarra"] = barcode
+        df.at[idx, col_sku] = sku
+        df.at[idx, col_barra] = barcode
 
     guardar_registro(registro)
     guardar_correlativo_sku({"siguiente": siguiente_sku, "ancho": ancho_sku})
