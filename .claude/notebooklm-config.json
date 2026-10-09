@@ -1,0 +1,14 @@
+{
+  "defaultNotebook": "gitana-meta-ads",
+  "notebooks": {
+    "gitana-meta-ads": {
+      "id": "666cee5c-8e42-4bfb-94e5-7432fd993dee",
+      "description": "Gitana Jeans - Meta Ads: reportes de campañas y recomendaciones"
+    }
+  },
+  "settings": {
+    "mode": "concise",
+    "responseLength": "default",
+    "persona": null
+  }
+}
