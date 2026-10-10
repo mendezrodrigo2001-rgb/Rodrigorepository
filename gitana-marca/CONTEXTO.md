@@ -15,6 +15,12 @@ Complementa `ESTILO.md` (tipografía y colores). Leer ambos antes de crear conte
 - Instagram: stories y reels dentro de zona segura (sin texto en los ~250 px de arriba y ~340 px de abajo).
 - Cierre fijo: "Disponible en locales y tienda online" (o solo "locales" según producto).
 
+## Regla de oro (pedida por el dueño): que luzca caro y que no parezca hecho por IA
+- Todo lo que se produzca tiene que verse **premium**: composición limpia, aire alrededor, un solo mensaje, tipografía de marca bien alineada, nada recargado.
+- **No debe parecer hecho por IA:** fotos reales (nunca generadas), retoque casi invisible, sin fondos inventados, sin efectos brillantes ni sombras exageradas, sin textos torcidos, sin emojis dentro de las imágenes, sin frases genéricas de "marketing de IA".
+- Antes de entregar, revisar la pieza como lo haría un director de arte: ¿se ve cara, cuidada y humana? Si algo se ve armado o saturado, se simplifica.
+- Preferir menos elementos y mejor ejecutados: respetar márgenes, alinear textos a una misma grilla, mantener el mismo tamaño y posición de la firma y del cierre en toda la semana.
+
 ## Rotación semanal
 Lun producto real · Mar editorial · Mié UGC/reel · Jue prueba social · Vie educativo · Sáb marca/detrás de escena · Dom outfit. Historias interactivas: domingo, miércoles y viernes.
 
