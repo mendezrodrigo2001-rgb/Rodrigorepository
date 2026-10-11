@@ -31,7 +31,7 @@ Lun producto real · Mar editorial · Mié UGC/reel · Jue prueba social · Vie 
 10% OFF en compras de más de $250.000 con todos los medios de pago, **exclusivo tienda online**, o 3 cuotas sin interés. Promociones **no acumulables**. Cambios dentro de los 30 días (con etiqueta y en condiciones). Confirmar vigencia antes de pautar.
 
 ## Catálogo (nombres confirmados por el dueño)
-Cargo Tulum · Wideleg Tribal (gris oscuro) · Wideleg Tilcara (blanco) · Oxford Tailandia (bootcut azul) · Mom Camboya (celeste con ruedo) · Oxford Burdeos. Otros: Chupín (muchos), Oxford (línea bootcut), Wideleg, Mom, Jean Recto Star/Sol/Mercurio/Jupiter. Usar solo modelos con stock en pauta. Fuente de verdad: catálogo de Meta (la tienda no se puede abrir desde la sesión en la nube).
+Wideleg Manchester (el cargo azul de las fotos de agosto; ojo: "Cargo Tulum" es otro producto del catálogo) · Wideleg Tribal (gris oscuro) · Wideleg Tilcara (blanco) · Oxford Tailandia (bootcut azul) · Mom Camboya (celeste con ruedo) · Oxford Burdeos. Otros: Chupín (muchos), Oxford (línea bootcut), Wideleg, Mom, Jean Recto Star/Sol/Mercurio/Jupiter. Usar solo modelos con stock en pauta. Fuente de verdad: catálogo de Meta (la tienda no se puede abrir desde la sesión en la nube).
 
 ## Material y límites técnicos
 - Drive (cuenta del dueño): carpeta "Fotos Gitana" con sesión septiembre (`Gitana Sofi Septiembre`, `celu-maru`, `indice`), sesión agosto (`Gitana Sofi 20/08/224`, fotos de 960×1280) y `Testimonios` (~50 capturas).
