@@ -21,8 +21,8 @@ Complementa `ESTILO.md` (tipografía y colores). Leer ambos antes de crear conte
 - Antes de entregar, revisar la pieza como lo haría un director de arte: ¿se ve cara, cuidada y humana? Si algo se ve armado o saturado, se simplifica.
 - Preferir menos elementos y mejor ejecutados: respetar márgenes, alinear textos a una misma grilla, mantener el mismo tamaño y posición de la firma y del cierre en toda la semana.
 
-## Eje creativo: "Piezas con carácter"
-Cada publicación es una **pieza** numerada (Nº 01, Nº 02…), vista como en una vitrina: una foto real, mucho aire y un solo gesto tipográfico. Etiqueta de serie en la portada ("Piezas con carácter · Nº 0X", Bold Italic magenta, sin borde), línea magenta corta, título en Black Italic, y cierre con firma "Gitana Jeans" en rosa + "Disponible en locales / y tienda online". Pilares: elegancia, simpleza, identidad, carácter, que se vea distinto y caro. Mecánica de cada pieza: una pregunta o idea ingeniosa que invita a participar (comentar un número, votar, preguntar). Nº 01 = camperas de jean (11/10).
+## Eje creativo (decidido el 11/10)
+Editorial de lookbook: **una idea clara por pieza, creativa, que llame la atención y se vea cara**. Sin frases de serie ("Piezas con carácter" quedó descartada) y sin obligación de que sea interactivo. Recursos: una palabra grande como título (ej. "Tulum."), láminas con leyendas mínimas ("Perfil.", "Espalda.", "Frente."), mucho aire, fotos reales, título en Black Italic (magenta sobre fondos claros, blanco con borde fino sobre fondos oscuros), línea magenta corta, cierre con "Gitana Jeans" en rosa + "Disponible en locales y tienda online" (o solo "locales"). La interactividad (comentar, votar) es opcional y solo si suma.
 
 ## Rotación semanal
 Lun producto real · Mar editorial · Mié UGC/reel · Jue prueba social · Vie educativo · Sáb marca/detrás de escena · Dom outfit. Historias interactivas: domingo, miércoles y viernes.
