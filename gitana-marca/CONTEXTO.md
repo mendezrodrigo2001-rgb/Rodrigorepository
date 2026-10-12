@@ -24,6 +24,9 @@ Complementa `ESTILO.md` (tipografía y colores). Leer ambos antes de crear conte
 ## Eje creativo (decidido el 11/10)
 Editorial de lookbook: **una idea clara por pieza, creativa, que llame la atención y se vea cara**. Sin frases de serie ("Piezas con carácter" quedó descartada) y sin obligación de que sea interactivo. Recursos: una palabra grande como título (ej. "Tulum."), láminas con leyendas mínimas ("Perfil.", "Espalda.", "Frente."), mucho aire, fotos reales, título en Black Italic (magenta sobre fondos claros, blanco con borde fino sobre fondos oscuros), línea magenta corta, cierre con "Gitana Jeans" en rosa + "Disponible en locales y tienda online" (o solo "locales"). La interactividad (comentar, votar) es opcional y solo si suma.
 
+## Mezclar carpetas de fotos (pedido del dueño)
+No usar siempre la misma sesión: **mezclar** fotos de distintas carpetas (septiembre estudio/calle, agosto en el local, videos del celu "celu-maru", testimonios) dentro de un mismo carrusel o semana. No repetir la misma foto ni el mismo modelo dentro de un carrusel. Jean Recto Star = el recto azul de la sesión de septiembre (estudio y calle).
+
 ## Rotación semanal
 Lun producto real · Mar editorial · Mié UGC/reel · Jue prueba social · Vie educativo · Sáb marca/detrás de escena · Dom outfit. Historias interactivas: domingo, miércoles y viernes.
 
