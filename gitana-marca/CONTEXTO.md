@@ -27,6 +27,9 @@ Editorial de lookbook: **una idea clara por pieza, creativa, que llame la atenci
 ## Mezclar carpetas de fotos (pedido del dueño)
 No usar siempre la misma sesión: **mezclar** fotos de distintas carpetas (septiembre estudio/calle, agosto en el local, videos del celu "celu-maru", testimonios) dentro de un mismo carrusel o semana. No repetir la misma foto ni el mismo modelo dentro de un carrusel. Jean Recto Star = el recto azul de la sesión de septiembre (estudio y calle).
 
+## Plantilla de copy (la usa el dueño al publicar, 13/10)
+Estructura: 1) gancho con emojis ("¿Blanco o azul? 🤍💙"), 2) nombres de los modelos, 3) pedido de acción ("Comentá tu lado y mañana te contamos cuál ganó."), 4) "Disponible en locales y tienda online.", 5) condiciones comerciales de la web: "Envíos a todo el país, 15% off con transferencia y 3 cuotas sin interés (exclusivo web)." 6) "Link en bio." 7) gitanajeans.mitiendanube.com. Escribir los copys con esta estructura. Vigente hoy en la web: 15% off por transferencia y envío gratis desde $190.000; la promo Día de la Madre (10% online +$250.000) va aparte, no acumulable.
+
 ## Rotación semanal
 Lun producto real · Mar editorial · Mié UGC/reel · Jue prueba social · Vie educativo · Sáb marca/detrás de escena · Dom outfit. Historias interactivas: domingo, miércoles y viernes.
 
