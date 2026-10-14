@@ -1,3 +1,9 @@
+# ACTUALIZACIÓN 14/10/2026 (reemplaza lo que contradiga abajo)
+- **Texto sobre fotos:** relleno **magenta `#EA2C85`** con **borde blanco fino** (2 a 3 px sobre 1080 de ancho), sin sombra. Ya no es blanco con borde magenta.
+- Se mantiene Playfair Display Black Italic (títulos) y Bold Italic (firma y datos), en minúscula normal, alineado derecho, sin texto torcido. Constante `MAGENTA_NUEVO` en `texto_marca.py`.
+- Títulos pequeños: no tapar cara ni producto; ubicarlos sobre pared o piso lisos.
+- Fondo crema `#F6EEE3` con texto tinta `#2A211C`; piezas de fondo negro con magenta vivo `#F20278` y gris `#CDCDCD`.
+
 # Estilo predeterminado de posts — Gitana Jeans
 
 Aplicar por defecto en todo post, carrusel o portada de Instagram, salvo que se pida otra cosa.
