@@ -1,3 +1,8 @@
+# FUENTE VIGENTE (decisión 14/10/2026, reemplaza todo lo anterior sobre tipografía)
+**Gelasio Bold** (`fonts/Gelasio-Bold.ttf`, licencia OFL) para TODO: títulos, firma y datos. Sin cursiva. Reemplaza a Playfair Display.
+Texto sobre fotos: relleno magenta `#EA2C85` + borde blanco fino (2-3 px sobre 1080 de ancho). Sobre fondo magenta `#EA2C85`: texto crema `#F6EEE3`.
+Referencia: post de agosto "Preferimos vender menos y que dure más" (serif gruesa tipo Georgia).
+
 # ACTUALIZACIÓN 14/10/2026 (reemplaza lo que contradiga abajo)
 - **Texto sobre fotos:** relleno **magenta `#EA2C85`** con **borde blanco fino** (2 a 3 px sobre 1080 de ancho), sin sombra. Ya no es blanco con borde magenta.
 - **Decisión 14/10: la fuente se queda en Playfair Display** (se probó Abril Fatface y se descartó).

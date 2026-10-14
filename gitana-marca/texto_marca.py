@@ -12,6 +12,8 @@ FIRMA = FONTS / 'PlayfairDisplay-BoldItalic.ttf'
 BLANCO, MAGENTA, MAGENTA_LINEA, ROSA = (255, 255, 255), (204, 46, 133), (196, 30, 106), (246, 184, 212)
 # Estilo vigente desde 14/10/2026: relleno magenta #EA2C85 con borde blanco fino (2-3 px sobre 1080 de ancho)
 MAGENTA_NUEVO = (234, 44, 133)
+# Fuente vigente desde 14/10/2026: Gelasio Bold para todo
+GELASIO = FONTS / 'Gelasio-Bold.ttf'
 S = 2
 W, H = 1080 * S, 1350 * S
 
