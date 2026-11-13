@@ -60,8 +60,19 @@ a{ transition:color .2s ease, opacity .2s ease; }
 }
 
 /* Talles */
-.btn-variant{ border-radius:0 !important; border:1px solid var(--g-line) !important; color:var(--g-ink) !important; background:#fff !important; }
-.btn-variant.selected, .btn-variant:hover{ background:var(--g-ink) !important; color:#fff !important; border-color:var(--g-ink) !important; }
+.btn-variant{ border-radius:0 !important; border:1px solid var(--g-line) !important; }
+.btn-variant:hover{ border-color:var(--g-ink) !important; }
+.btn-variant.selected, .btn-variant.selected .btn-variant-content{
+  background:var(--g-ink) !important; color:#fff !important; border-color:var(--g-ink) !important;
+}
+
+/* ---------- Ficha de producto ---------- */
+.product-name, h1.h2, h1{
+  font-family:var(--g-serif) !important; font-weight:500 !important; text-transform:none !important; letter-spacing:0;
+}
+.js-price-display, .product-price{ font-weight:600; font-size:26px; color:var(--g-ink); }
+.js-product-form .btn-primary, .js-addtocart.btn-primary{ padding-top:16px; padding-bottom:16px; }
+.breadcrumbs a, .breadcrumb a{ color:#6E6862; }
 
 /* ---------- Botones ---------- */
 .btn-primary, .btn.btn-primary{
