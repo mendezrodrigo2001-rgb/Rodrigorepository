@@ -1,0 +1,194 @@
+iata,ciudad,pais,region,lat,lon,tipo,metro
+EZE,Buenos Aires (Ezeiza),AR,SA,-34.82,-58.54,H,BUE
+AEP,Buenos Aires (Aeroparque),AR,SA,-34.56,-58.42,H,BUE
+MDQ,Mar del Plata,AR,SA,-38.13,-57.57,M,
+COR,Córdoba,AR,SA,-31.32,-64.21,L,
+MDZ,Mendoza,AR,SA,-32.83,-68.79,L,
+ROS,Rosario,AR,SA,-32.90,-60.79,L,
+BRC,Bariloche,AR,SA,-41.15,-71.16,L,
+NQN,Neuquén,AR,SA,-38.95,-68.16,L,
+SLA,Salta,AR,SA,-24.86,-65.49,L,
+TUC,Tucumán,AR,SA,-26.84,-65.10,L,
+IGR,Puerto Iguazú,AR,SA,-25.74,-54.47,L,
+FTE,El Calafate,AR,SA,-50.28,-72.05,M,
+USH,Ushuaia,AR,SA,-54.84,-68.30,M,
+BHI,Bahía Blanca,AR,SA,-38.72,-62.17,M,
+MVD,Montevideo,UY,SA,-34.84,-56.03,H,
+PDP,Punta del Este,UY,SA,-34.86,-55.09,M,
+SCL,Santiago de Chile,CL,SA,-33.39,-70.79,H,
+GRU,São Paulo (Guarulhos),BR,SA,-23.43,-46.47,H,SAO
+CGH,São Paulo (Congonhas),BR,SA,-23.63,-46.66,L,SAO
+VCP,Campinas (Viracopos),BR,SA,-23.01,-47.13,L,SAO
+GIG,Río de Janeiro (Galeão),BR,SA,-22.81,-43.25,H,RIO
+SDU,Río de Janeiro (Santos Dumont),BR,SA,-22.91,-43.16,L,RIO
+FLN,Florianópolis,BR,SA,-27.67,-48.55,L,
+POA,Porto Alegre,BR,SA,-29.99,-51.17,L,
+IGU,Foz do Iguaçu,BR,SA,-25.60,-54.49,L,
+SSA,Salvador,BR,SA,-12.91,-38.32,L,
+REC,Recife,BR,SA,-8.13,-34.92,L,
+FOR,Fortaleza,BR,SA,-3.78,-38.53,L,
+BSB,Brasilia,BR,SA,-15.87,-47.92,H,
+CNF,Belo Horizonte,BR,SA,-19.62,-43.97,L,
+LIM,Lima,PE,SA,-12.02,-77.11,H,
+BOG,Bogotá,CO,SA,4.70,-74.15,H,
+MDE,Medellín,CO,SA,6.16,-75.42,L,
+CTG,Cartagena,CO,SA,10.44,-75.51,L,
+UIO,Quito,EC,SA,-0.13,-78.36,M,
+GYE,Guayaquil,EC,SA,-2.16,-79.88,M,
+ASU,Asunción,PY,SA,-25.24,-57.52,M,
+VVI,Santa Cruz,BO,SA,-17.64,-63.14,M,
+LPB,La Paz,BO,SA,-16.51,-68.19,M,
+CCS,Caracas,VE,SA,10.60,-66.99,M,
+PTY,Ciudad de Panamá,PA,CA,9.07,-79.38,H,
+SJO,San José,CR,CA,9.99,-84.21,L,
+SAL,San Salvador,SV,CA,13.44,-89.06,H,
+CUN,Cancún,MX,CA,21.04,-86.87,L,
+MEX,Ciudad de México,MX,CA,19.44,-99.07,H,MEX
+NLU,Ciudad de México (AIFA),MX,CA,19.74,-99.02,L,MEX
+GDL,Guadalajara,MX,CA,20.52,-103.31,L,
+TIJ,Tijuana,MX,CA,32.54,-116.97,L,
+SDQ,Santo Domingo,DO,CA,18.43,-69.67,L,
+PUJ,Punta Cana,DO,CA,18.57,-68.36,L,
+HAV,La Habana,CU,CA,22.99,-82.41,M,
+SJU,San Juan,PR,CA,18.44,-66.00,L,
+MBJ,Montego Bay,JM,CA,18.50,-77.91,L,
+AUA,Aruba,AW,CA,12.50,-70.01,M,
+CUR,Curazao,CW,CA,12.19,-68.96,M,
+MIA,Miami,US,NA,25.80,-80.29,H,
+FLL,Fort Lauderdale,US,NA,26.07,-80.15,L,
+PBI,West Palm Beach,US,NA,26.68,-80.10,L,
+MCO,Orlando,US,NA,28.43,-81.31,L,
+TPA,Tampa,US,NA,27.98,-82.53,L,
+ATL,Atlanta,US,NA,33.64,-84.43,H,
+JFK,Nueva York (JFK),US,NA,40.64,-73.78,H,NYC
+EWR,Nueva York (Newark),US,NA,40.69,-74.17,H,NYC
+LGA,Nueva York (LaGuardia),US,NA,40.78,-73.87,L,NYC
+BOS,Boston,US,NA,42.37,-71.01,H,
+PHL,Filadelfia,US,NA,39.87,-75.24,H,
+IAD,Washington (Dulles),US,NA,38.95,-77.46,H,WAS
+DCA,Washington (Reagan),US,NA,38.85,-77.04,L,WAS
+BWI,Baltimore,US,NA,39.18,-76.67,L,WAS
+ORD,Chicago (O'Hare),US,NA,41.98,-87.90,H,CHI
+MDW,Chicago (Midway),US,NA,41.79,-87.75,L,CHI
+DFW,Dallas,US,NA,32.90,-97.04,H,
+IAH,Houston (Intercontinental),US,NA,29.98,-95.34,H,HOU
+HOU,Houston (Hobby),US,NA,29.65,-95.28,L,HOU
+DEN,Denver,US,NA,39.86,-104.67,H,
+LAS,Las Vegas,US,NA,36.08,-115.15,L,
+LAX,Los Ángeles,US,NA,33.94,-118.41,H,LAX
+BUR,Burbank,US,NA,34.20,-118.36,L,LAX
+SNA,Santa Ana,US,NA,33.68,-117.87,L,LAX
+ONT,Ontario CA,US,NA,34.06,-117.60,L,LAX
+SAN,San Diego,US,NA,32.73,-117.19,L,
+SFO,San Francisco,US,NA,37.62,-122.38,H,SFO
+OAK,Oakland,US,NA,37.72,-122.22,L,SFO
+SJC,San José CA,US,NA,37.36,-121.93,L,SFO
+SEA,Seattle,US,NA,47.45,-122.31,H,
+YYZ,Toronto,CA,NA,43.68,-79.63,H,
+YUL,Montreal,CA,NA,45.47,-73.74,H,
+YVR,Vancouver,CA,NA,49.19,-123.18,H,
+KEF,Reikiavik,IS,EU,63.99,-22.62,H,
+MAD,Madrid,ES,EU,40.47,-3.56,H,
+BCN,Barcelona,ES,EU,41.30,2.08,H,
+AGP,Málaga,ES,EU,36.67,-4.50,L,
+SVQ,Sevilla,ES,EU,37.42,-5.89,L,
+VLC,Valencia,ES,EU,39.49,-0.48,L,
+PMI,Palma de Mallorca,ES,EU,39.55,2.74,L,
+TFS,Tenerife Sur,ES,EU,28.04,-16.57,L,
+LPA,Gran Canaria,ES,EU,27.93,-15.39,L,
+LIS,Lisboa,PT,EU,38.77,-9.13,H,
+OPO,Oporto,PT,EU,41.24,-8.68,L,
+FAO,Faro,PT,EU,37.01,-7.97,L,
+CDG,París (CDG),FR,EU,49.01,2.55,H,PAR
+ORY,París (Orly),FR,EU,48.72,2.38,L,PAR
+BVA,París (Beauvais),FR,EU,49.45,2.11,L,PAR
+NCE,Niza,FR,EU,43.66,7.22,L,
+LYS,Lyon,FR,EU,45.73,5.08,L,
+MRS,Marsella,FR,EU,43.44,5.22,L,
+LHR,Londres (Heathrow),GB,EU,51.47,-0.45,H,LON
+LGW,Londres (Gatwick),GB,EU,51.15,-0.19,L,LON
+STN,Londres (Stansted),GB,EU,51.89,0.24,L,LON
+LTN,Londres (Luton),GB,EU,51.87,-0.37,L,LON
+DUB,Dublín,IE,EU,53.42,-6.27,H,
+AMS,Ámsterdam,NL,EU,52.31,4.76,H,
+EIN,Eindhoven,NL,EU,51.45,5.37,L,
+BRU,Bruselas,BE,EU,50.90,4.48,H,
+CRL,Bruselas (Charleroi),BE,EU,50.46,4.45,L,
+FRA,Fráncfort,DE,EU,50.04,8.56,H,
+HHN,Fráncfort (Hahn),DE,EU,49.95,7.26,L,
+DUS,Düsseldorf,DE,EU,51.29,6.77,L,
+CGN,Colonia,DE,EU,50.87,7.14,L,
+MUC,Múnich,DE,EU,48.35,11.79,H,
+BER,Berlín,DE,EU,52.37,13.50,L,
+ZRH,Zúrich,CH,EU,47.46,8.55,H,
+BSL,Basilea,CH,EU,47.59,7.53,L,
+GVA,Ginebra,CH,EU,46.24,6.11,L,
+VIE,Viena,AT,EU,48.11,16.57,H,
+BTS,Bratislava,SK,EU,48.17,17.21,L,
+BUD,Budapest,HU,EU,47.44,19.26,L,
+PRG,Praga,CZ,EU,50.10,14.26,L,
+WAW,Varsovia (Chopin),PL,EU,52.17,20.97,H,
+WMI,Varsovia (Modlin),PL,EU,52.45,20.65,L,
+KRK,Cracovia,PL,EU,50.08,19.78,L,
+CPH,Copenhague,DK,EU,55.62,12.65,H,
+MMX,Malmö,SE,EU,55.54,13.37,L,
+ARN,Estocolmo,SE,EU,59.65,17.92,H,
+OSL,Oslo,NO,EU,60.19,11.10,H,
+HEL,Helsinki,FI,EU,60.32,24.96,H,
+FCO,Roma (Fiumicino),IT,EU,41.80,12.25,H,ROM
+CIA,Roma (Ciampino),IT,EU,41.80,12.59,L,ROM
+MXP,Milán (Malpensa),IT,EU,45.63,8.72,H,MIL
+LIN,Milán (Linate),IT,EU,45.45,9.28,L,MIL
+BGY,Milán (Bérgamo),IT,EU,45.67,9.70,L,MIL
+VCE,Venecia,IT,EU,45.51,12.35,L,
+BLQ,Bolonia,IT,EU,44.53,11.29,L,
+NAP,Nápoles,IT,EU,40.88,14.29,L,
+ATH,Atenas,GR,EU,37.94,23.94,H,
+IST,Estambul,TR,EU,41.26,28.74,H,IST
+SAW,Estambul (Sabiha),TR,EU,40.90,29.31,L,IST
+CMN,Casablanca,MA,AF,33.37,-7.59,H,
+RAK,Marrakech,MA,AF,31.61,-8.04,L,
+CAI,El Cairo,EG,AF,30.12,31.41,H,
+ADD,Adís Abeba,ET,AF,8.98,38.80,H,
+NBO,Nairobi,KE,AF,-1.32,36.93,H,
+LOS,Lagos,NG,AF,6.58,3.32,H,
+JNB,Johannesburgo,ZA,AF,-26.14,28.24,H,
+CPT,Ciudad del Cabo,ZA,AF,-33.97,18.60,L,
+TLV,Tel Aviv,IL,ME,32.01,34.89,H,
+AMM,Amán,JO,ME,31.72,35.99,M,
+DXB,Dubái,AE,ME,25.25,55.36,H,DXB
+DWC,Dubái (Al Maktoum),AE,ME,24.90,55.16,L,DXB
+SHJ,Sharjah,AE,ME,25.33,55.52,L,DXB
+AUH,Abu Dabi,AE,ME,24.43,54.65,H,
+DOH,Doha,QA,ME,25.27,51.61,H,
+DEL,Delhi,IN,AS,28.57,77.10,H,
+BOM,Bombay,IN,AS,19.09,72.87,H,
+CMB,Colombo,LK,AS,7.18,79.88,M,
+MLE,Malé,MV,AS,4.19,73.53,M,
+BKK,Bangkok (Suvarnabhumi),TH,AS,13.69,100.75,H,BKK
+DMK,Bangkok (Don Mueang),TH,AS,13.91,100.61,L,BKK
+SIN,Singapur,SG,AS,1.36,103.99,H,
+KUL,Kuala Lumpur,MY,AS,2.75,101.71,H,
+CGK,Yakarta,ID,AS,-6.13,106.66,H,
+DPS,Bali,ID,AS,-8.75,115.17,L,
+SGN,Ho Chi Minh,VN,AS,10.82,106.65,L,
+HAN,Hanói,VN,AS,21.22,105.81,L,
+MNL,Manila,PH,AS,14.51,121.02,H,
+HKG,Hong Kong,HK,AS,22.31,113.91,H,
+SZX,Shenzhen,CN,AS,22.64,113.81,L,
+CAN,Cantón,CN,AS,23.39,113.30,H,
+PVG,Shanghái,CN,AS,31.14,121.81,H,
+PEK,Pekín (Capital),CN,AS,40.08,116.58,H,BJS
+PKX,Pekín (Daxing),CN,AS,39.51,116.41,H,BJS
+TPE,Taipéi,TW,AS,25.08,121.23,H,
+ICN,Seúl,KR,AS,37.46,126.44,H,
+NRT,Tokio (Narita),JP,AS,35.77,140.39,H,TYO
+HND,Tokio (Haneda),JP,AS,35.55,139.78,H,TYO
+KIX,Osaka,JP,AS,34.43,135.23,L,
+SYD,Sídney,AU,OC,-33.95,151.18,H,
+MEL,Melbourne,AU,OC,-37.67,144.84,H,MEL
+AVV,Melbourne (Avalon),AU,OC,-38.04,144.47,L,MEL
+BNE,Brisbane,AU,OC,-27.38,153.12,H,
+PER,Perth,AU,OC,-31.94,115.97,H,
+AKL,Auckland,NZ,OC,-37.01,174.79,H,
+CHC,Christchurch,NZ,OC,-43.49,172.53,L,

@@ -1,0 +1,35 @@
+{
+  "defaults": {
+    "valor_hora": 5,
+    "percepcion_pct": 30,
+    "hotel_noche": 45
+  },
+  "opciones": [
+    {
+      "nombre": "Directo EZE-MAD (Aerolíneas/Iberia), pago en pesos",
+      "precio": 1150, "equipaje": 0, "traslado": 25, "pago": "tarjeta_ars",
+      "horas_extra": 0, "riesgo": "bajo"
+    },
+    {
+      "nombre": "Mismo vuelo pagado con dólares propios",
+      "precio": 1150, "equipaje": 0, "traslado": 25, "pago": "usd",
+      "horas_extra": 0, "riesgo": "bajo"
+    },
+    {
+      "nombre": "Split: EZE-GRU (Flybondi) + GRU-LIS (TAP) + LIS-MAD (low-cost)",
+      "precio": 780, "equipaje": 70, "asiento": 0, "traslado": 25, "pago": "usd",
+      "noches_extra": 1, "horas_extra": 14, "riesgo": "medio"
+    },
+    {
+      "nombre": "Salida desde MVD (bus a Colonia + Buquebus) a MAD",
+      "precio": 820, "equipaje": 0, "traslado": 70, "pago": "usd",
+      "horas_extra": 8, "riesgo": "bajo"
+    },
+    {
+      "nombre": "Millas: Smiles promo 60k + tasas",
+      "precio": 210, "equipaje": 0, "traslado": 25, "pago": "usd",
+      "millas": 60000, "valor_milla": 0.009,
+      "horas_extra": 3, "riesgo": "bajo"
+    }
+  ]
+}
