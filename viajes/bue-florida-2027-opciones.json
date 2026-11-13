@@ -1,0 +1,11 @@
+{
+  "defaults": {"valor_hora": 5, "percepcion_pct": 30, "hotel_noche": 0, "traslado": 40},
+  "opciones": [
+    {"nombre": "OBVIA: directo EZE-MIA sale 24/3 (Semana Santa), pago en pesos", "precio": 3300, "pago": "tarjeta_ars", "riesgo": "bajo"},
+    {"nombre": "Directo EZE-MIA sale 29-31/3 (post Pascua), pago USD", "precio": 2100, "pago": "usd", "riesgo": "bajo"},
+    {"nombre": "Copa vía PTY, post Pascua, pago USD", "precio": 1920, "equipaje": 0, "pago": "usd", "horas_extra": 15, "riesgo": "bajo"},
+    {"nombre": "Sky vía LIM (low-cost) + 1 valija c/u", "precio": 1650, "equipaje": 360, "pago": "usd", "horas_extra": 21, "riesgo": "bajo"},
+    {"nombre": "Arajet vía PUJ a MCO, open-jaw MCO/MIA + valijas", "precio": 1660, "equipaje": 360, "traslado": 40, "pago": "usd", "horas_extra": 24, "riesgo": "medio"},
+    {"nombre": "Millas Aerolíneas Plus promo (40k c/u) + tasas", "precio": 600, "millas": 120000, "valor_milla": 0.01, "pago": "usd", "riesgo": "bajo"}
+  ]
+}
