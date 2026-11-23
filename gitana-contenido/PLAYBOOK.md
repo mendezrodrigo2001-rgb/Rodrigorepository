@@ -78,7 +78,7 @@ Python 3.13 (/usr/bin/python3.13), ffmpeg, Gelasio vía @fontsource/gelasio. Scr
 - Prendas a evitar por ya usadas/rechazadas: Wideleg Saturno (= wide leg costura lateral, ya usado), Short Egipto (= short con cordones, ya usado), Gary Wideleg.
 
 ## Carpeta de entrega (pedido del dueño 23/11)
-Todo el contenido se guarda en Google Drive, carpeta **"Programación Redes"** (My Drive) > "Semana 23-29 nov 2026" > una subcarpeta por día (Lun 23 / Mar 24 / Mié 25…). Cada subcarpeta: pieza de feed, copy (.docx), historias A y B, testimonio. El límite de la conexión es ~3 MB de archivos por subida: los videos más pesados no se pueden subir desde la sesión; se entregan por chat.
+Todo el contenido se guarda en Google Drive, carpeta **"Calendario Redes"** (My Drive) > "Semana 23-29 nov 2026" > una subcarpeta por día (Lun 23 / Mar 24 / Mié 25…). Cada subcarpeta: pieza de feed, copy (.docx), historias A y B, testimonio. El límite de la conexión es ~3 MB de archivos por subida: los videos más pesados no se pueden subir desde la sesión; se entregan por chat.
 - Mar 24: post editorial "Noche." (Short Orión, Sofi Nov 2026) · A: clip jeans celestes (celu-maru/seleccion IMG_7864_p2) · B: foto Fotos Sofi 2026 #4308 (short denim claro) · testimonio IMG_1008 "Mi tienda favorita".
 - Mié 25: reel UGC (clips IMG_3312 p2/p3/p4 de celu-maru/seleccion, otra modelo, 8,5 s sin música) · A: Jeans Ottawa (Sofi Nov 2026) · B: clip IMG_7874_p4 · testimonio IMG_1009 "Ese jean".
 - Testimonios ya usados (sumar): IMG_1008, IMG_1009, IMG_8441.
