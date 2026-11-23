@@ -57,3 +57,10 @@ Cada día un **eje de identidad distinto** (ver plan de la semana). No repetir p
 ## Técnicas disponibles
 Carrusel 4:5 (1440×1800), historia foto completa 9:16 con texto mínimo, video con zoom lento (leon), loops/boomerang/eco, stop-motion de poses, testimonio compuesto (2160×3840), anuncios Meta 1:1 y 9:16.
 Python 3.13 (/usr/bin/python3.13), ffmpeg, Gelasio vía @fontsource/gelasio. Scripts en el scratchpad de cada sesión (se pierden): regenerar desde este playbook.
+
+## Decisiones del dueño (23/11/2026)
+- Documento de copy por pieza de feed: **Word (.docx)**, guardado junto a la pieza.
+- Entrega en **dos tandas por semana**: lunes (lun–mar–mié) y miércoles (jue–vie–sáb–dom).
+- Testimonios: **mezcla** (capturas nuevas que suba a Drive > Testimonios primero; viejas no usadas para completar).
+- Estilo de texto por defecto en historias: **tinta oscura (#2A211C) sobre pared clara**, Gelasio Bold, mínimo; logo fuera de la franja segura.
+- Nombres de lavados Jupiter/Star/Sol/Mercurio: confirmados (CONTEXTO.md).
