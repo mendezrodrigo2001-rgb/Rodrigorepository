@@ -11,6 +11,9 @@ Ticket promedio ≈ $200.000. La marca tiene que **lucir cara y natural**.
 3. **1 pieza de feed**: post, carrusel o reel (rotar formatos; nunca repetir idea/prenda/foto ya usada).
 4. **Un documento de copy por cada pieza de feed** (caption + notas), guardado junto a la pieza.
 
+## REGLA DE NO REPETICIÓN DEL DÍA (pedida por el dueño 23/11)
+En un mismo día, el post/carrusel/reel y las 2 historias deben mostrar **prendas y fotos distintas entre sí** (3 prendas distintas por día, más el testimonio). Nunca la misma foto, recorte o prenda en feed e historias del mismo día. Chequear antes de entregar.
+
 ## Filosofía creativa (cada cosa)
 - Llamar la atención y atrapar en el primer segundo. **No vender: ofrecer experiencia, identidad, ganas de pertenecer.**
 - Premium sobrio, natural, fotos reales sin sobreeditar (colores reales; retoque apenas perceptible).
@@ -66,5 +69,7 @@ Python 3.13 (/usr/bin/python3.13), ffmpeg, Gelasio vía @fontsource/gelasio. Scr
 - Nombres de lavados Jupiter/Star/Sol/Mercurio: confirmados (CONTEXTO.md).
 
 ## Registro semana 23/11
-- Lun 23: carrusel "El jean que elegís sin pensar" (Baggy Mia, 1 foto hero, 3 slides) + historia A (foto completa) + historia B (zoom 7 s a cintura/bolsillo) + testimonio IMG_8441 ("Es hermoso", capturada el 22/11). Copy .docx entregado. Pendiente de la tanda del lunes: Mar 24 y Mié 25.
+- Lun 23: carrusel "El jean que elegís sin pensar" (Baggy Mia, 3 slides) + historia A (Mini Río, foto completa) + historia B (Jean Lima, zoom 7 s a los rotos). [Corregido: antes las historias repetían Baggy Mia] + testimonio IMG_8441 ("Es hermoso", capturada el 22/11). Copy .docx entregado. Pendiente de la tanda del lunes: Mar 24 y Mié 25.
 - Aprendizajes: con 1 sola foto hero por prenda, usar recortes de alta resolución + zoom en video; mantener el logo fuera de la franja segura de arriba en historias; no poner contador sobre el logo.
+
+- Prendas a evitar por ya usadas/rechazadas: Wideleg Saturno (= wide leg costura lateral, ya usado), Short Egipto (= short con cordones, ya usado), Gary Wideleg.
