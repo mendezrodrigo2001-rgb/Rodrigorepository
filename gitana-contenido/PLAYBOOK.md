@@ -64,3 +64,7 @@ Python 3.13 (/usr/bin/python3.13), ffmpeg, Gelasio vía @fontsource/gelasio. Scr
 - Testimonios: **mezcla** (capturas nuevas que suba a Drive > Testimonios primero; viejas no usadas para completar).
 - Estilo de texto por defecto en historias: **tinta oscura (#2A211C) sobre pared clara**, Gelasio Bold, mínimo; logo fuera de la franja segura.
 - Nombres de lavados Jupiter/Star/Sol/Mercurio: confirmados (CONTEXTO.md).
+
+## Registro semana 23/11
+- Lun 23: carrusel "El jean que elegís sin pensar" (Baggy Mia, 1 foto hero, 3 slides) + historia A (foto completa) + historia B (zoom 7 s a cintura/bolsillo) + testimonio IMG_8441 ("Es hermoso", capturada el 22/11). Copy .docx entregado. Pendiente de la tanda del lunes: Mar 24 y Mié 25.
+- Aprendizajes: con 1 sola foto hero por prenda, usar recortes de alta resolución + zoom en video; mantener el logo fuera de la franja segura de arriba en historias; no poner contador sobre el logo.
