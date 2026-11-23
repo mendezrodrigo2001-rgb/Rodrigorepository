@@ -1,0 +1,109 @@
+/* ===== GITANA JEANS · look premium (tema Morelia / Tienda Nube) =====
+   Pegar en: Editar diseño > Edición avanzada de CSS > Probar CSS
+   Paleta: fucsia #EA2C85 · tinta #1A1A1A · blanco · gris cálido #F6F4F2 */
+
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600;700&display=swap');
+
+:root{
+  --g-mg:#EA2C85;
+  --g-ink:#1A1A1A;
+  --g-soft:#F6F4F2;
+  --g-line:#E9E5E1;
+  --g-serif:'Gelasio','Playfair Display',Georgia,serif;
+}
+
+/* ---------- Base ---------- */
+body{ color:var(--g-ink); -webkit-font-smoothing:antialiased; }
+a{ transition:color .2s ease, opacity .2s ease; }
+
+/* ---------- Cabecera ---------- */
+.js-head-main, .head-container{ background:#fff !important; }
+.head-container{ border-bottom:1px solid var(--g-line); box-shadow:none !important; }
+.desktop-nav-link, .nav-list-link{
+  text-transform:uppercase; letter-spacing:.14em; font-size:12px !important; font-weight:500;
+}
+.desktop-nav-link:hover, .desktop-nav-link.current{ color:var(--g-mg) !important; }
+
+/* ---------- Títulos de sección ---------- */
+.cat-title, .title-container h2, .title-container h3, .subtitle-container h2{
+  font-family:var(--g-serif) !important; font-weight:500 !important;
+  text-transform:none !important; letter-spacing:0 !important;
+  font-size:30px !important; text-align:center; position:relative; padding-bottom:16px;
+}
+.cat-title:after{
+  content:""; display:block; width:44px; height:2px; background:var(--g-mg); margin:14px auto 0;
+}
+
+/* ---------- Grilla de productos ---------- */
+.item-image, .item-image-container, .item-image-featured{ border-radius:0 !important; background:var(--g-soft); }
+.item-image img{ transition:transform .6s cubic-bezier(.2,.7,.2,1); }
+.js-item-product:hover .item-image img{ transform:scale(1.035); }
+.js-item-product{ box-shadow:none !important; border:0 !important; }
+
+.item-name{
+  font-size:12px !important; letter-spacing:.12em; text-transform:uppercase;
+  font-weight:500; color:var(--g-ink) !important; margin:12px 0 4px !important;
+}
+.item-price{ font-weight:600; color:var(--g-ink); font-size:15px; }
+.item-price-compare{ color:#9A948E !important; font-weight:400; font-size:13px; }
+.payment-discount-price-product-container, .text-accent{ color:var(--g-mg) !important; font-weight:500; }
+.js-max-installments{ color:#6E6862; }
+
+/* Etiquetas: oferta en fucsia, envío/stock discretos */
+.label-accent, .label-primary, .js-offer-label{
+  background:var(--g-mg) !important; color:#fff !important; border-radius:0 !important;
+  letter-spacing:.1em; text-transform:uppercase; font-size:10px !important; font-weight:600; padding:5px 9px !important;
+}
+.label-light, .js-free-shipping-minimum-label, .js-stock-label{
+  background:rgba(255,255,255,.94) !important; color:var(--g-ink) !important; border-radius:0 !important;
+  font-size:10px !important; letter-spacing:.06em;
+}
+
+/* Talles */
+.btn-variant{ border-radius:0 !important; border:1px solid var(--g-line) !important; }
+.btn-variant:hover{ border-color:var(--g-ink) !important; }
+.btn-variant.selected, .btn-variant.selected .btn-variant-content{
+  background:var(--g-ink) !important; color:#fff !important; border-color:var(--g-ink) !important;
+}
+
+/* ---------- Ficha de producto ---------- */
+.product-name, h1.h2, h1{
+  font-family:var(--g-serif) !important; font-weight:500 !important; text-transform:none !important; letter-spacing:0;
+}
+.js-price-display, .product-price{ font-weight:600; font-size:26px; color:var(--g-ink); }
+.js-product-form .btn-primary, .js-addtocart.btn-primary{ padding-top:16px; padding-bottom:16px; }
+.breadcrumbs a, .breadcrumb a{ color:#6E6862; }
+
+/* ---------- Botones ---------- */
+.btn-primary, .btn.btn-primary{
+  background:var(--g-ink) !important; color:#fff !important; border:1px solid var(--g-ink) !important;
+  border-radius:0 !important; text-transform:uppercase; letter-spacing:.14em; font-weight:600; font-size:12px;
+  box-shadow:none !important; text-shadow:none !important; transition:all .25s ease;
+}
+.btn-primary:hover, .btn.btn-primary:hover{ background:var(--g-mg) !important; border-color:var(--g-mg) !important; color:#fff !important; }
+.btn-see-all-prods{ background:transparent !important; color:var(--g-ink) !important; }
+.btn-see-all-prods:hover{ background:var(--g-ink) !important; color:#fff !important; border-color:var(--g-ink) !important; }
+
+/* ---------- Banners ---------- */
+.textbanner, .textbanner-image, .home-slider img{ border-radius:0 !important; }
+.textbanner-text{ font-family:var(--g-serif); letter-spacing:.02em; }
+
+/* ---------- Confianza: envíos, cuotas, etc. ---------- */
+.banner-services-footer, .js-mobile-services{ border-top:1px solid var(--g-line); border-bottom:1px solid var(--g-line); background:var(--g-soft); }
+.service-title{
+  font-family:var(--g-serif) !important; font-weight:600 !important; text-transform:none !important; letter-spacing:0;
+}
+.service-icon{ color:var(--g-mg) !important; fill:var(--g-mg) !important; }
+
+/* ---------- Footer ---------- */
+.footer, footer.js-footer{ background:var(--g-ink) !important; color:#E9E5E1 !important; }
+.footer a, footer.js-footer a{ color:#fff !important; opacity:.85; }
+.footer a:hover, footer.js-footer a:hover{ color:var(--g-mg) !important; opacity:1; }
+.footer h3, .footer .h6{ font-family:var(--g-serif); text-transform:none; letter-spacing:0; color:#fff; }
+
+/* ---------- Celular ---------- */
+@media (max-width:767px){
+  .cat-title, .title-container h2, .title-container h3{ font-size:24px !important; }
+  .item-name{ font-size:11px !important; letter-spacing:.1em; }
+  .container-wide{ padding-left:8px; padding-right:8px; }
+}
