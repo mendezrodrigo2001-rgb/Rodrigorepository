@@ -26,3 +26,11 @@ Eje de cada pieza: experiencia / identidad / pertenencia (no oferta). Prendas y 
 - Producir los 7 días de una vez o día a día.
 - Testimonios: quedan pocas capturas sin usar → necesito capturas nuevas.
 - Confirmar si "Texto oscuro sobre pared clara" en historias puede reemplazar el estándar magenta+borde blanco.
+
+## Actualización 23/11 (mezcla de tipos + creadoras)
+| Día | Tipo | Idea | Fuente principal |
+|---|---|---|---|
+| Jue 26 | VENTA + prueba social | "Lo que dicen + lo que te llevás": 15% con transferencia y 3 cuotas con testimonios reales | Jean Lima / Recto Star + testimonio |
+| Vie 27 | Educativo | "Recto, wideleg o baggy: cuál va con vos" (solo datos confirmados) | Fotos Sofi 2026 + Sofi Nov 2026 |
+| Sáb 28 | VENTA suave | "Envíos a todo el país + cambio de talle asegurado" | Contenido/Mica o Fio + foto hero |
+| Dom 29 | Outfit/comunidad | Look completo + pregunta de comunidad | Contenido/Lu Perez (sin espejo) + Sofi Nov 2026 |

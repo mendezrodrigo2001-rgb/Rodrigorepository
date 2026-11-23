@@ -82,3 +82,17 @@ Todo el contenido se guarda en Google Drive, carpeta **"Calendario Redes"** (My 
 - Mar 24: post editorial "Noche." (Short Orión, Sofi Nov 2026) · A: clip jeans celestes (celu-maru/seleccion IMG_7864_p2) · B: foto Fotos Sofi 2026 #4308 (short denim claro) · testimonio IMG_1008 "Mi tienda favorita".
 - Mié 25: reel UGC (clips IMG_3312 p2/p3/p4 de celu-maru/seleccion, otra modelo, 8,5 s sin música) · A: Jeans Ottawa (Sofi Nov 2026) · B: clip IMG_7874_p4 · testimonio IMG_1009 "Ese jean".
 - Testimonios ya usados (sumar): IMG_1008, IMG_1009, IMG_8441.
+
+## Mezcla de tipos de contenido (pedido del dueño 23/11) — variar SIEMPRE
+Cada semana alternar tipos; nunca dos días seguidos del mismo tipo. Esquema semanal:
+- **Lun** producto real (jean protagonista) · **Mar** editorial/identidad · **Mié** UGC/creadoras (reel con material de Contenido) · **Jue** VENTA (con prueba social) · **Vie** educativo · **Sáb** VENTA (suave: beneficios) · **Dom** outfit/comunidad.
+- **Ventas: 2 por semana (jueves y sábado)**. Venta = beneficios concretos (15% off con transferencia, 3 cuotas sin interés, envíos a todo el país, cambio de talle asegurado, stock/novedad), siempre con look premium (no gritar ofertas, no banners agresivos). El resto: experiencia, identidad, pertenencia.
+- **Banco de temas educativos:** cómo elegir el lavado, diferencia recto/wideleg/baggy/mom/chupín, cómo medir tu talle, cuidado del jean (solo datos confirmados), cómo combinar un jean en 3 looks, qué mirar al comprar online, cambios y envíos.
+- **Prueba social:** testimonios reales, capturas, UGC de clientas (con datos tapados).
+- **Detrás de escena / marca:** local, sesión, equipo (historias).
+- Las historias también rotan tipo (educativo corto, pregunta de comunidad, venta suave, detrás de escena) y deben diferir del feed del día.
+
+## Contenido de creadoras (Drive > Contenido)
+Carpetas: **Lu Perez**, **Mica Barrientos**, **Fio Berlin** (Hooks y Cierres, Reel crudo, Reel editado). Usarlas regularmente (al menos 2–3 piezas por semana, mezcladas con material propio).
+- **Mención (decisión del dueño):** en el copy/documento nombrarlas **tal cual figuran en Drive** ("Lu Perez", "Mica Barrientos", "Fio Berlin"); el dueño las etiqueta (@) al publicar. Poner la nota "Etiquetar a: …" en el docx de copy.
+- Lu usa Wideleg en espejo: no usar sus videos de espejo. Los crudos pesados no se bajan (límite ~10 MB); usar los livianos o pedir copias livianas.
