@@ -98,7 +98,7 @@ Carpetas: **Lu Perez**, **Mica Barrientos**, **Fio Berlin** (Hooks y Cierres, Re
 - Lu usa Wideleg en espejo: no usar sus videos de espejo. Los crudos pesados no se bajan (límite ~10 MB); usar los livianos o pedir copias livianas.
 
 ## Semana 23/11 — jueves a domingo (producido 23/11)
-- Jue 26 VENTA+prueba social: carrusel "Mirá lo que dicen" (Recto Star + testimonio IMG_1006 + beneficios) · A: clip Fio Berlin (Hook 3) · B: Short Liverpool · testimonio IMG_0996 "Q bueno está".
+- Jue 26 VENTA+prueba social: carrusel "Mirá lo que dicen" (Recto Star + testimonio IMG_1006 + beneficios) · A: video de venta con bolsa Gitana (IMG_7874 p2) + texto animado 15% off / 3 cuotas · B: Short MrSella · testimonio IMG_0996 "Q bueno está". [Corregido 23/11: antes A=clip Fio en silencio (sin objetivo) y B=Short Liverpool (ojos cerrados).]
 - Vie 27 EDUCATIVO: reel "Test de calce" (clips Mica Barrientos: Pegado a la cintura, Sentadilla, Calce 1) · A: tarjeta tipográfica "Antes de comprar un jean" · B: clip celu-maru IMG_7864 p1 · testimonio IMG_0996 "Buen calce".
 - Sáb 28 VENTA suave: carrusel "Elegí tranquila" (Bermuda Luna + cómo comprar + cambio de talle) · A: clip Mica (Hook 2) · B: foto Sofi 2026 #4286 · testimonio IMG_1001 "Voy al local".
 - Dom 29 OUTFIT/COMUNIDAD: carrusel "Domingo de nada" (Chaleco Caty, Pantalón puntilla Caty, pregunta) · A: clip Fio Berlin (Cierre 2) · B: clip Mica (Cuerpo 2) con pregunta · testimonio IMG_0996 "Muy buen calce".
@@ -110,3 +110,8 @@ Carpetas: **Lu Perez**, **Mica Barrientos**, **Fio Berlin** (Hooks y Cierres, Re
 - **Fio Berlin / Hooks y Cierres**: clips verticales 2160×3840 de ella sentada en silla con jeans (Hook 3, Cierre 2); tienen audio hablado (usar sin audio o con permiso).
 - **Lu Perez / Fotos (IMG_4001–4026)**: son selfies de espejo con el celular tapando la cara (Gary Wideleg): NO usar.
 - Testimonios usados (sumar): IMG_1006, IMG_0996 (4 burbujas distintas), IMG_1001.
+
+## Aprendizajes de correcciones del dueño (23/11)
+- Un clip mudo de una creadora hablando sin contexto no tiene objetivo: cada historia debe tener un propósito claro (vender, educar, preguntar, mostrar prenda). Si el clip es de una creadora hablando, usar solo con su audio/subtítulos o con texto que aporte.
+- Revisar SIEMPRE la cara ampliada antes de elegir una foto: descartar ojos cerrados o mirada hacia abajo (Short Liverpool descartado).
+- Pendiente de revisar con el dueño: la historia A del domingo (clip de Fio Berlin sin audio) puede tener el mismo problema.
