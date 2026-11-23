@@ -1,5 +1,7 @@
 # Gitana Jeans — Playbook de contenido (memoria del proyecto)
 
+**Leer primero:** `../CLAUDE.md`, `../gitana-marca/CONTEXTO.md` y `../gitana-marca/ESTILO.md` (fuente de verdad de marca, tono, catálogo y estilo). Este playbook solo agrega la rutina diaria/semanal y el registro de lo usado. Si algo acá contradice a esos archivos, mandan esos archivos.
+
 Dueño: Rodrigo. Marca argentina de jeans femeninos. Tienda: gitanajeans.mitiendanube.com (tema Morelia). Instagram/TikTok/Meta Ads.
 Ticket promedio ≈ $200.000. La marca tiene que **lucir cara y natural**.
 
@@ -17,7 +19,12 @@ Ticket promedio ≈ $200.000. La marca tiene que **lucir cara y natural**.
 
 ## Reglas fijas
 - Español argentino, voseo, femenino. Evitar "Después, no."
-- Paleta: fucsia #EA2C85, crema, carbón; tipografía Gelasio (serif). Logo: color o blanco según fondo.
+- Paleta: fucsia #EA2C85, crema #F6EEE3, tinta #2A211C; tipografía **Gelasio Bold** (vigente). Logo: color o blanco según fondo.
+- Texto sobre fotos (ESTILO.md): relleno magenta #EA2C85 + borde blanco fino; en las historias de esta sesión se usó tinta oscura sobre pared clara y fue aceptado — preguntar si se quiere unificar.
+- **Sin hashtags salvo pedido. No hablar de cuerpos.** Evitar la palabra "actitud" escrita en las piezas. Sin emojis dentro de las imágenes.
+- Zona segura de historias/reels: sin texto en ~250 px de arriba y ~340 px de abajo (el logo de las historias de hoy rozó la franja de arriba: bajarlo/subirlo a ≥250).
+- Short-polleras, polleras y camperas de jean: **solo en locales** → cierre "Disponible en locales". Jeans: "Disponible en locales y tienda online".
+- Catálogo: usar modelos con stock; fuente de verdad = catálogo de Meta.
 - Historias: zona limpia abajo-centro (aprox. y 1330–1500 de 1920) para el sticker de link. Usar "Respondé esta historia…", nunca "comentarios".
 - No usar fotos con ojos cerrados/mirada hacia abajo. No inventar atributos de prenda (tiro, calce, material): solo lo visible o confirmado.
 - Pie estándar de captions de feed: "Disponible en locales y tienda online. Envíos a todo el país, 15% off con transferencia y 3 cuotas sin interés (exclusivo web). Link en bio. gitanajeans.mitiendanube.com"
@@ -33,7 +40,7 @@ Ticket promedio ≈ $200.000. La marca tiene que **lucir cara y natural**.
 Recto: JÚPITER (azul oscuro), STAR (azul medio), SOL (celeste). Wideleg: GARY, SATURNO. BAGGY MIA. JEAN LIMA. JEANS OTTAWA. JEANS HOLANDA.
 MINI RIO. SHORT: EMILY, EGIPTO, LIVERPOOL, ORION, MRSELLA. BERMUDA: GLORIA, LUNA, NIGERIA, (7135). POLLERA LEÓN (short pollera). CHALECO CATY NG. PANTALÓN PUNTILLA CATY.
 Otras fotos: Drive > Fotos Gitana > Fotos Sofi 2026 (25 fotos convertidas, 1950×2600); más material sin explorar: Lu Perez, Ari 2026, Fio, Mica, Sofi Septiembre.
-(Nombre exacto de cada lavado: pendiente de confirmación del dueño.)
+Nombres CONFIRMADOS por el dueño en CONTEXTO.md: Jean Recto Star / Sol / Mercurio / Jupiter (usar sin dudar). Wideleg Manchester/Tribal/Tilcara, Oxford Tailandia/Burdeos, Mom Camboya, Chupín, Cargo Tulum.
 
 ## Cadencia semanal sugerida (rotar formatos)
 Lun carrusel · Mar reel · Mié post · Jue carrusel · Vie reel · Sáb post/carrusel · Dom reel liviano.

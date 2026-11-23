@@ -1,27 +1,28 @@
 # Plan semanal — lun 23 al dom 29 de noviembre de 2026 (borrador para aprobar)
 
-Cada día: 1 pieza de feed + 2 historias + 1 historia testimonio + `copy.md` de la pieza de feed.
-Los conceptos son **experiencia / identidad / pertenencia** (no oferta). Prendas y fotos son provisorias hasta ver cada foto (se confirma antes de producir). Nombres de prendas = títulos de archivo en Drive.
+Cada día: 1 pieza de feed + 2 historias + 1 historia testimonio + `copy.md` de la pieza de feed (con la plantilla de copy del dueño: gancho → nombres → pedido de acción → disponibilidad → condiciones web → Link en bio → URL).
+Rotación del dueño: Lun producto real · Mar editorial · Mié UGC/reel · Jue prueba social · Vie educativo · Sáb marca/detrás de escena · Dom outfit. Historias interactivas: dom, mié y vie.
+Eje de cada pieza: experiencia / identidad / pertenencia (no oferta). Prendas y fotos provisorias hasta ver cada foto.
 
-| Día | Feed | Eje de identidad | Prenda hero (provisoria) | Historia A | Historia B |
+| Día | Tipo (rotación) | Formato feed | Idea (experiencia/identidad) | Prenda hero (provisoria) | Historias A / B |
 |---|---|---|---|---|---|
-| Lun 23 | Carrusel | "El jean que elegís sin pensar" (sin esfuerzo) | Baggy Mia | foto completa + una palabra | detalle de tela/costura en zoom lento |
-| Mar 24 | Reel (loop/poses) | "Una prenda, cinco formas de pararte" (actitud) | Jeans Ottawa | primer cuadro del reel | pregunta: "Respondé esta historia: ¿cuál es tu jean de siempre?" |
-| Mié 25 | Post | "Mar del Plata, 6 pm" (de dónde somos) | Short Orión o Emily | foto completa | clip 1 s/loop |
-| Jue 26 | Carrusel | "Anatomía de un bolsillo" (el oficio) | Jean Lima | detalle | foto completa |
-| Vie 27 | Reel | "Viernes: el outfit ya está elegido" (ritual) | Bermuda Gloria o Luna | foto completa | pregunta de comunidad |
-| Sáb 28 | Carrusel/post | "Noche de sábado en denim negro" (salir) | Pantalón Puntilla + Chaleco Caty | foto completa | video zoom lento |
-| Dom 29 | Reel liviano | "Domingo de nada" (calma, calidez) | Jeans Holanda o Saturno | foto completa | quote editorial |
+| Lun 23 | Producto real | Carrusel | "El jean que elegís sin pensar" | Baggy Mia | A: foto completa + una palabra · B: detalle en zoom lento |
+| Mar 24 | Editorial | Post/lámina | Una palabra grande como título (estilo "Tulum.") — lugar/momento de Mar del Plata | Short Orión o Emily (locales + web) | A: foto completa · B: lámina "Perfil./Espalda./Frente." |
+| Mié 25 | UGC / reel | Reel (loop o poses) | "Una prenda, cinco formas de pararte" | Jeans Ottawa | A: primer cuadro del reel · B (interactiva): "Respondé esta historia: ¿cuál es tu jean de siempre?" |
+| Jue 26 | Prueba social | Carrusel | "Lo que dicen quienes ya lo usan" con capturas reales + foto | Jean Lima o Recto Star | A: foto completa · B: detalle |
+| Vie 27 | Educativo | Carrusel | "Anatomía de un bolsillo / cómo elegir tu jean" (solo datos confirmados) | Jean Lima | A: foto completa · B (interactiva): votación ¿recto o wideleg? |
+| Sáb 28 | Marca / detrás de escena | Reel liviano | "Cómo se prepara una sesión" / el taller / el local | material propio (Lu, Fio, Mica, Ari: por explorar) | A: foto del local/proceso · B: clip 1–2 s |
+| Dom 29 | Outfit | Post/carrusel | "Domingo de nada": un look completo | Jeans Holanda o Saturno + top | A: foto completa · B (interactiva): "¿Cómo lo usarías?" |
 
 ## Reglas de producción por día
-1. Elegir foto hero (alta resolución; ojos abiertos, sin mirada hacia abajo).
-2. Pieza de feed + copy.md (caption + 2 variantes de hook + hashtags opcionales + nota de qué se verificó).
-3. Historias A y B con zona de sticker libre.
-4. Testimonio del día (captura real; si no hay nueva, usar una vieja no usada).
-5. Registrar todo lo usado en PLAYBOOK.md.
+1. Elegir foto hero (alta resolución; ojos abiertos, sin mirada hacia abajo; mezclar carpetas, no repetir foto/modelo en un carrusel).
+2. Pieza de feed + `copy.md` (caption con plantilla, 2 variantes de gancho, nota de qué se verificó y qué no).
+3. Historias A y B con zona de sticker libre y zona segura (250 px arriba / 340 px abajo).
+4. Testimonio del día (captura real; si no hay nueva, una vieja no usada).
+5. Registrar lo usado en PLAYBOOK.md.
 
 ## Pendientes / dudas abiertas
-- Formato del documento de copy (md, Word o Google Doc).
+- Formato del documento de copy (md, Word, Google Doc en Drive).
 - Producir los 7 días de una vez o día a día.
 - Testimonios: quedan pocas capturas sin usar → necesito capturas nuevas.
-- Confirmar nombres de lavados (Júpiter / Star / Sol).
+- Confirmar si "Texto oscuro sobre pared clara" en historias puede reemplazar el estándar magenta+borde blanco.
