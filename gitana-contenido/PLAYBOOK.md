@@ -11,6 +11,9 @@ Ticket promedio ≈ $200.000. La marca tiene que **lucir cara y natural**.
 3. **1 pieza de feed**: post, carrusel o reel (rotar formatos; nunca repetir idea/prenda/foto ya usada).
 4. **Un documento de copy por cada pieza de feed** (caption + notas), guardado junto a la pieza.
 
+## USAR TODO EL MATERIAL (pedido del dueño 23/11)
+Usar **todo el contenido disponible, imágenes Y videos, de todas las carpetas** (no solo una). Mapa completo y límites técnicos en `MATERIAL.md`. Cada día: 3 fuentes distintas (feed + historia A + historia B), mezclando foto y video y rotando carpetas durante la semana.
+
 ## REGLA DE NO REPETICIÓN DEL DÍA (pedida por el dueño 23/11)
 En un mismo día, el post/carrusel/reel y las 2 historias deben mostrar **prendas y fotos distintas entre sí** (3 prendas distintas por día, más el testimonio). Nunca la misma foto, recorte o prenda en feed e historias del mismo día. Chequear antes de entregar.
 
