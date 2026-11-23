@@ -29,3 +29,9 @@ Este repo es público: no subir fotos/videos ni datos de clientas; solo copys e 
 2. Incluir videos: clips de `celu-maru/seleccion`, `Ari 2026`, `Fio/Hooks y Cierres` (≤10 MB) para historias y reels; fotos hero HEIC para feed/historias.
 3. Rotar a lo largo de la semana: Sofi Nov 2026 (jeans), Fotos Sofi 2026, Gitana Clothes (camperas/sweaters/cintos), Contenido (Lu/Mica/Fio/Ari), Fotos 2025.
 4. Registrar en PLAYBOOK.md qué archivo se usó para no repetir.
+
+## Muestra revisada (23/11/2026) — qué es realmente cada fuente
+- **Ari 2026** (29 clips MP4 ~1,5 MB, 1024×576 horizontales, 7–9 s): clips reales de **sweaters/buzos** (buzo pelusa bordó, sweater gris texturado), modelo girando frente a pared blanca. Producto de invierno; usar como "lookbook de invierno que viene" o para historias con recorte vertical; calidad media (baja resolución).
+- **celu-maru / seleccion** (32 clips MP4 ~1–2 MB, 1080×1920 verticales, 5–7 s): clips de celular de **jeans celestes** (de espalda, con campera de cuero, con bolsa Gitana, gorra). Muy buenos para historias y reels (ya verticales). Ideal para el "clip de 1 segundo" y para historias B.
+- Nombres de archivo tipo `IMG_7864_p2.mp4` / `p4`: partes de un mismo video largo (p1, p2…).
+- Pendiente de revisar a fondo: resto de celu-maru, Mica (crudos), Fio (hooks), videos de `Videos jeans 2025/26`, camperas/sweaters (fotos por color), cintos.
