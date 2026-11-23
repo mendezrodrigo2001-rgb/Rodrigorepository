@@ -96,3 +96,17 @@ Cada semana alternar tipos; nunca dos días seguidos del mismo tipo. Esquema sem
 Carpetas: **Lu Perez**, **Mica Barrientos**, **Fio Berlin** (Hooks y Cierres, Reel crudo, Reel editado). Usarlas regularmente (al menos 2–3 piezas por semana, mezcladas con material propio).
 - **Mención (decisión del dueño):** en el copy/documento nombrarlas **tal cual figuran en Drive** ("Lu Perez", "Mica Barrientos", "Fio Berlin"); el dueño las etiqueta (@) al publicar. Poner la nota "Etiquetar a: …" en el docx de copy.
 - Lu usa Wideleg en espejo: no usar sus videos de espejo. Los crudos pesados no se bajan (límite ~10 MB); usar los livianos o pedir copias livianas.
+
+## Semana 23/11 — jueves a domingo (producido 23/11)
+- Jue 26 VENTA+prueba social: carrusel "Mirá lo que dicen" (Recto Star + testimonio IMG_1006 + beneficios) · A: clip Fio Berlin (Hook 3) · B: Short Liverpool · testimonio IMG_0996 "Q bueno está".
+- Vie 27 EDUCATIVO: reel "Test de calce" (clips Mica Barrientos: Pegado a la cintura, Sentadilla, Calce 1) · A: tarjeta tipográfica "Antes de comprar un jean" · B: clip celu-maru IMG_7864 p1 · testimonio IMG_0996 "Buen calce".
+- Sáb 28 VENTA suave: carrusel "Elegí tranquila" (Bermuda Luna + cómo comprar + cambio de talle) · A: clip Mica (Hook 2) · B: foto Sofi 2026 #4286 · testimonio IMG_1001 "Voy al local".
+- Dom 29 OUTFIT/COMUNIDAD: carrusel "Domingo de nada" (Chaleco Caty, Pantalón puntilla Caty, pregunta) · A: clip Fio Berlin (Cierre 2) · B: clip Mica (Cuerpo 2) con pregunta · testimonio IMG_0996 "Muy buen calce".
+- Entregado en Drive > Calendario Redes > Semana 23-29 nov 2026 (carpetas por día).
+
+## Hallazgos de material (23/11)
+- Descarga de Drive: límite duro ~10 MiB por archivo (no se puede bajar ni comprimir lo más pesado desde la sesión). Se ve un poco más: archivos ≤ ~10,4 MB decimales bajan.
+- **Mica Barrientos / Crudos** tiene una serie lista de calce: Calce 1/2/3, Calce de cerca, Cuerpo 1/2, Hooks 1–3, Pegado a la cintura, Sentadilla, Cierre (jean celeste, top negro). Los bajables (≤10 MB): Calce 1, Hook 2, Hook3, Pegado a la cintura, Sentadilla, Cuerpo 2. Útil para educativo/UGC.
+- **Fio Berlin / Hooks y Cierres**: clips verticales 2160×3840 de ella sentada en silla con jeans (Hook 3, Cierre 2); tienen audio hablado (usar sin audio o con permiso).
+- **Lu Perez / Fotos (IMG_4001–4026)**: son selfies de espejo con el celular tapando la cara (Gary Wideleg): NO usar.
+- Testimonios usados (sumar): IMG_1006, IMG_0996 (4 burbujas distintas), IMG_1001.
