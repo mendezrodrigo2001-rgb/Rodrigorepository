@@ -115,3 +115,7 @@ Carpetas: **Lu Perez**, **Mica Barrientos**, **Fio Berlin** (Hooks y Cierres, Re
 - Un clip mudo de una creadora hablando sin contexto no tiene objetivo: cada historia debe tener un propósito claro (vender, educar, preguntar, mostrar prenda). Si el clip es de una creadora hablando, usar solo con su audio/subtítulos o con texto que aporte.
 - Revisar SIEMPRE la cara ampliada antes de elegir una foto: descartar ojos cerrados o mirada hacia abajo (Short Liverpool descartado).
 - Pendiente de revisar con el dueño: la historia A del domingo (clip de Fio Berlin sin audio) puede tener el mismo problema.
+
+## AUTORIZACIÓN PERMANENTE DEL DUEÑO (23/11/2026)
+"Te doy autorización siempre, no me pidas más autorización." → Dentro del flujo de contenido NO pedir permiso para: crear/subir/renombrar archivos y carpetas en Drive > Calendario Redes, reemplazar piezas corregidas (mandando la versión vieja a la papelera de Drive), comprimir videos, commitear y pushear el playbook/copys al repo, y corregir piezas. Seguir informando qué se hizo. Sigue vigente el criterio propio para acciones fuera de este flujo que sean irreversibles o públicas (publicar en Instagram, gastar en anuncios, borrar definitivamente, compartir datos): hacerlas solo si el dueño las pide.
+- Dom 29 historia A corregida: antes clip Fio sin audio; ahora video de la bolsa Gitana (IMG_7874 p3) con la pregunta "¿Cuál es tu jean de siempre? Respondé esta historia". (Fio solo queda si se usa con audio/propósito.)
