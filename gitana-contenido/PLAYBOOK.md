@@ -130,3 +130,9 @@ Programada todos los días a las 18:57 (hora Argentina) en esta sesión. Ver `CO
 - Entregables: MP4 + HTML autocontenido (base64, ~5 MB) + HTML con link (placeholder de URL). Drive > Calendario Redes > "Home Tienda - Video celular" (MP4 liviano 2,8 MB + HTML con link).
 - Pendiente/límite: los videos de >10 MB no se pueden bajar; no se usaron Ari (horizontales, baja resolución) ni los crudos pesados.
 - Home v2 (24/11): 48 s, 37 tomas = 22 clips de video (celu-maru, Mica) + 15 fotos hero de prendas en ráfagas, mismo etalonaje y cierre con logo. Pedido del dueño: "más bola a los videos, sin dejar de lado lo viejo" (fotos y piezas anteriores). Script: gs/homecine2.py. Drive: "Home Tienda - Video celular" (MP4 liviano 540p + HTML con link).
+
+## PRIORIDAD: carpeta más nueva "Sofi Nov 2026" (pedido del dueño 24/11)
+"Dale importancia a la carpeta más nueva, además de lo que estás usando, como Sofi Nov 2026." → En TODO contenido (feed, historias, home, ads) dar protagonismo a Drive > Fotos Gitana > Sofi Nov 2026 (fuente más reciente y de mejor calidad: fotos hero 3213×5712 con nombre de prenda y videos 4K), sin dejar de usar el resto del material.
+- Videos de Sofi Nov bajables (≤10 MB): IMG_4527 (bermuda, primer plano → escalera, 1,6 s), IMG_4374 (wide leg, 2160×3840, 2,7 s), IMG_7240 (jeans caminando/espalda con ojalillos, 2160×3840, 4,7 s). Los demás (IMG_4376/4358/4315/4336/4304/7462, 15–64 MB) NO se pueden bajar: pedir al dueño copias livianas (≤10 MB).
+- Fotos hero (25) ya convertidas: Júpiter, Star, Sol, Gary, Saturno, Baggy Mia, Lima, Ottawa, Holanda, Mini Río, Short Emily/Egipto/Liverpool(ojos cerrados: no usar)/Orión/MrSella, Bermudas Gloria/Luna/Nigeria/7135, Pollera León, Chaleco Caty, Pantalón puntilla Caty.
+- Home v3 (24/11): 43 s, ≥50% de la duración con material de Sofi Nov (3 videos + 21 fotos hero) + clips celu-maru/Mica. Abre con IMG_4374 y IMG_4527. Script gs/homecine3.py.
