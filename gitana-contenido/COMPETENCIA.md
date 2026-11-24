@@ -25,3 +25,19 @@
 2. **Competencia en modo promo (Black Friday 50% off, packs de 3 shorts, "en promo")**. Gitana no compite por descuento: sostener premium con beneficios concretos (15% transferencia, cuotas, envíos, cambio de talle). Decisión del dueño: ¿hacer algo específico por Black Friday (27/11)? Si no, mantener el plan.
 3. **Muchas variantes del mismo mensaje** (≥7 creatividades de "wide leg en promo"): para ads de Gitana, armar 3 variantes por mensaje (hook + visual); en orgánico ya hay 3 hooks por pieza en los Word.
 4. **Tendencia de siluetas:** priorizar chupín/ajustado, barrel/balloon y recto en la semana del 30/11.
+
+## Día 2 — 24/11/2026 (corrida automática 18:57 AR)
+**Visto de verdad (Meta Ad Library, AR, solo títulos/fechas; sin métricas):**
+- Andina Club: 81 anuncios activos. Mensajes repetidos en 6–9 variantes cada uno: "3 shorts + 3 bombachas de regalo 🎁", "3 cargos en 3 cuotas sin interés", "3 Cargos para este verano ☀️", "Black Friday activado ✅". Todo gira en torno a **packs de 3 + regalo + cuotas**, y la temporada (verano).
+- Black Friday en moda AR (búsqueda "black friday jeans"): OurGenesis "50% OFF", Santos Indumentaria "3x2 en toda la web" (6 anuncios por categoría: regalos, looks de fiestas, lino), BUKAN "30% off con transferencia o 3 cuotas s/interés", Natalia Fava "3 y 6 cuotas sin interés", Beatriz Novoa "Black Friday | Jeans", Peuque Jeans (anuncios de catálogo con precios). El mercado está saturado de descuento fuerte y cuotas.
+- Otros nombres vistos: Striven Jeans ("Estos jeans le dan otro aire a tu vidriera", tono aspiracional, sin precio), mstore, Andra Urgat, NAIMA (títulos vacíos).
+**Web (EE. UU., fuentes 2025–26, direccional):** carruseles con mayor engagement que reels en algunos estudios (otros dicen lo contrario); el algoritmo pesa guardados y tiempo de visualización; las primeras láminas del carrusel definen el alcance; UGC = confianza.
+**Inferencia (no verificada):** que repitan tantas variantes sugiere que les rinde la promo + cuotas; no hay datos de ventas.
+
+**3 aprendizajes accionables**
+1. **Todos compiten por descuento/pack en Black Friday → diferenciarse con lo opuesto sin bajar el precio:** mensaje "no es una liquidación, es el jean que vas a usar años" + beneficios concretos ya vigentes (15% transferencia, 3 cuotas, envíos, cambio de talle). Replicar su claridad de oferta (una línea) pero con tono Gitana. NO crear cupón/promo sin autorización del dueño.
+2. **Cuotas sin interés y "pack de 3" son el gancho de ellos:** probar en la pieza de venta del sábado 28 el ángulo "3 cuotas, un jean que elegís bien" y una historia con combo de looks (jean + remera/top) sin descuento forzado.
+3. **Variantes del mismo mensaje:** replicar en orgánico: 3 hooks por pieza (ya en los Word) y cambiar el primer cuadro/lámina entre feed e historia. En carruseles, reforzar lámina 1–2 (guardables: "guardá este test", "cómo elegir tu calce") porque guardados + deslizamiento mueven el alcance.
+
+**Aplicado hoy:** actualizado este archivo y el playbook. NO se reemplazaron piezas en Drive (no hay cambio que justifique rehacer las ya producidas); queda propuesto reforzar copy de Vie 27 (contra-posición a Black Friday) y Sáb 28 (cuotas) al producir la semana del 30/11.
+**Pendiente para el dueño:** ¿querés una acción propia de Black Friday (cupón/promo)? Ahora puedo crearla desde el conector (probado hoy), pero no lo hago sin tu OK.
