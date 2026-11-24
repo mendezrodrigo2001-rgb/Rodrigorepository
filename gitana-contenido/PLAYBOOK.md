@@ -123,3 +123,9 @@ Carpetas: **Lu Perez**, **Mica Barrientos**, **Fio Berlin** (Hooks y Cierres, Re
 
 ## Tarea diaria de análisis de competencia (pedido del dueño 23/11)
 Programada todos los días a las 18:57 (hora Argentina) en esta sesión. Ver `COMPETENCIA.md` (método, límites, competidores y aprendizajes). Cada corrida: analizar, sacar 3 aprendizajes, aplicarlos al contenido pendiente en Drive > Calendario Redes, actualizar COMPETENCIA.md/PLAYBOOK y resumirle al dueño. Día 1 aplicó: hook "¿Tu jean te aprieta?" en el copy del viernes 27.
+
+## Video cinematográfico para la HOME (solo celular) — 24/11/2026
+- Pedido del dueño: video nuevo, cine, caro/profesional, solo para celular, con TODOS los videos de Drive; entregar código HTML.
+- Hecho: montaje 9:16 (720×1280, 25 s, sin audio) con 14 tomas de los 32 clips verticales de Drive > Fotos Gitana > Gitana Sofi Septiembre > celu-maru/seleccion (IMG_3312, 3258, 3259, 3271, 3282, 3305, 7874, 7864, 3295), zoom lento, fundidos, etalonaje cálido, viñeta y grano sutil, cierre crema con logo. Script: gs/homecine.py (scratchpad).
+- Entregables: MP4 + HTML autocontenido (base64, ~5 MB) + HTML con link (placeholder de URL). Drive > Calendario Redes > "Home Tienda - Video celular" (MP4 liviano 2,8 MB + HTML con link).
+- Pendiente/límite: los videos de >10 MB no se pueden bajar; no se usaron Ari (horizontales, baja resolución) ni los crudos pesados.
