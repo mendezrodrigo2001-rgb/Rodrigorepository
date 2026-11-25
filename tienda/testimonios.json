@@ -1,8 +1,58 @@
 [
-  {"texto": "El pedido me llegó súper bien! El jeans una bomba!! Amo el calce que tienen!!", "autor": "Lucía"},
-  {"texto": "Compré un jean hace 4 años y todavía lo tengo — fue el mejor calce que usé en mi vida.", "autor": "Rocío"},
-  {"texto": "Todos mis jeans son Gitana. Me probé otros y no tienen comparación el calce.", "autor": "Evelyn"},
-  {"texto": "Me quedó un poco ajustado de cintura, compré un talle más y el calce quedó espectacular. No había encontrado un jean mejor.", "autor": "Gise"},
-  {"texto": "Tenía miedo de que no me quedara cuando lo vi, pero es perfecto. ¡El mes que viene me compro otro!", "autor": "Silvia"},
-  {"texto": "Uso jeans Gitana desde hace más de 18 años. Duran años, no se deforman, no se achican ni se agrandan.", "autor": "vall_andru"}
+  {
+    "texto": "El pedido me llegó súper bien! El jeans una bomba!! Amo el calce que tienen!!",
+    "autor": "Lucía"
+  },
+  {
+    "texto": "Compré un jean hace 4 años y todavía lo tengo — fue el mejor calce que usé en mi vida.",
+    "autor": "Rocío"
+  },
+  {
+    "texto": "Todos mis jeans son Gitana. Me probé otros y no tienen comparación el calce.",
+    "autor": "Evelyn"
+  },
+  {
+    "texto": "Me quedó un poco ajustado de cintura, compré un talle más y el calce quedó espectacular. No había encontrado un jean mejor.",
+    "autor": "Gise"
+  },
+  {
+    "texto": "Tenía miedo de que no me quedara cuando lo vi, pero es perfecto. ¡El mes que viene me compro otro!",
+    "autor": "Silvia"
+  },
+  {
+    "texto": "Uso jeans Gitana desde hace más de 18 años. Duran años, no se deforman, no se achican ni se agrandan.",
+    "autor": "vall_andru"
+  },
+  {
+    "texto": "Los pantalones que compré en talle 50 elastizado me quedaron excelente! Gran recomendación de talle!",
+    "autor": "Clienta Gitana"
+  },
+  {
+    "texto": "Hola chicas, quería agradecerles, ya me llegó el pantalón, me quedó divino 💗",
+    "autor": "Clienta Gitana"
+  },
+  {
+    "texto": "Me llegó todo rapidísimo, antes de lo esperado, y como siempre, hermosos los jeans.",
+    "autor": "Clienta Gitana"
+  },
+  {
+    "texto": "Tengo algunos jeans desde hace por lo menos 15 años. Jamás se me gastó o rompió un jean, los termino regalando y están impecables.",
+    "autor": "Karla"
+  },
+  {
+    "texto": "Son eternos y siempre quedan igual: no pierden color, ni se estiran, ni se achican. Son los más.",
+    "autor": "Caricias al Corazón"
+  },
+  {
+    "texto": "Los uso hace más de 20 años. El jean, los detalles, el calce, la durabilidad, hasta la perfumina en el empaque: todo los hace únicos. Hay que reconocer que son los mejores.",
+    "autor": "Mónica"
+  },
+  {
+    "texto": "Empecé a usarlos a los 13 años y hoy tengo 29. Conozco otras marcas, pero juro que a Gitana no hay con qué compararlos.",
+    "autor": "Brenda"
+  },
+  {
+    "texto": "El jean me quedó divino! Tiene el calce perfecto que se ve en la publicidad y la calidad es buenísima. Lo recomiendo.",
+    "autor": "Pao"
+  }
 ]
