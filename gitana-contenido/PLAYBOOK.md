@@ -144,3 +144,9 @@ Programada todos los días a las 18:57 (hora Argentina) en esta sesión. Ver `CO
 - Black Friday AR: competidores con 50% off / 3x2 / packs / cuotas. Gitana: posicionamiento premium "el jean que elegís una vez", sin descuento sin OK del dueño.
 - Conector Tienda Nube probado (24/11): puede leer pedidos/clientes/pagos/envíos y crear/editar/borrar cupones, promociones, categorías, productos, precio/stock/visibilidad (probado con objetos de prueba, ya borrados). No edita temas clásicos. Consultar al dueño antes de cualquier cambio real.
 - Primeras láminas del carrusel deben ser guardables; 3 hooks por pieza.
+
+## DATOS REALES de Instagram de Gitana (capturas del dueño, 25/11/2026) — REGLA DE DISEÑO
+Vistas visibles en la grilla (muestra chica, fechas distintas; direccional):
+- NO funciona (más bajo): láminas crema con la foto como recuadro y texto chico al costado ("Noche." 740 · "Baggy Mia / El jean que elegís sin pensar." 1.439).
+- SÍ funciona (más alto): foto a sangre (full-bleed) con titular grande serif blanco ("Del más oscuro al más claro." 4.260 · "¿Cuál es tu largo?" 3.261 con "Deslizá y elegí" · "Cuatro looks, una sesión." 2.266 · "Short con cordones" 2.033) y sobre todo **reel con movimiento sin texto (13.900)**. Portada fucsia "Un recto. Tres lavados." 1.506 (medio).
+- REGLAS desde hoy: (1) dejar de usar la plantilla crema con foto en recuadro y texto chico; (2) portadas/historias con foto a sangre + titular grande (1–2 líneas, serif, blanco) ; (3) priorizar reels con movimiento (caminar, girar, calce) frente a estáticos; (4) ganchos en forma de pregunta de elección ("¿Cuál es tu largo?", "Deslizá y elegí"); (5) el fucsio sólido solo para series/comparaciones, no como portada por defecto.
