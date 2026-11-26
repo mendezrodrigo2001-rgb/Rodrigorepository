@@ -52,14 +52,7 @@
    "cat": "/accesorios/collares/",
    "keys": [
     "/productos/collar-pechera-cadenas-con-flecos-dorado",
-    "/productos/collar-largo-sol-y-nacar-plateado",
-    "/productos/collar-largo-sol-y-nacar-dorado",
-    "/productos/collar-largo-libelula-y-flores-plateado",
-    "/productos/collar-gamuza-y-cadena-arabe-marron",
-    "/productos/collar-gamuza-y-cadena-arabe-negro",
     "/productos/collar-cadena-eslabones-dobles-plateado-brillante",
-    "/productos/collar-doble-cadena-dije-gota-con-aros-plateado",
-    "/productos/collar-largo-triple-cadena-dije-ovalo-plateado",
     "/productos/collar-choker-gamuza-corazones-marron"
    ]
   },
@@ -72,48 +65,14 @@
     "/productos/collar-choker-caracol-mostacillas-plateado",
     "/productos/collar-choker-cadena-dijes-marinos-turquesa",
     "/productos/collar-choker-cadena-dijes-marinos-plateado",
-    "/productos/collar-choker-dije-dragon-marron",
-    "/productos/collar-largo-argolla-marron",
-    "/productos/collar-largo-argolla-bordo"
+    "/productos/collar-choker-dije-dragon-marron"
    ]
   },
   {
    "u": "/accesorios/collares/?page=3",
    "cat": "/accesorios/collares/",
    "keys": [
-    "/productos/collar-largo-argolla-animal-print-dorado",
-    "/productos/collar-largo-dije-cuadrado-negro",
-    "/productos/collar-largo-dije-cuadrado-animal-print",
     "/productos/collar-cadena-dije-corona-dorado"
-   ]
-  },
-  {
-   "u": "/accesorios/gorras/",
-   "cat": "/accesorios/gorras/",
-   "keys": [
-    "/productos/boina-negra-hebilla-dirza",
-    "/productos/gorra-piluso-negro-liso",
-    "/productos/gorra-yute-negro",
-    "/productos/gorra-piluso-beige-liso",
-    "/productos/gorra-piluso-tribales-negro",
-    "/productos/gorro-charol-bordo",
-    "/productos/gorro-charol-negro",
-    "/productos/gorra-icon-verde",
-    "/productos/gorra-la-turquesa"
-   ]
-  },
-  {
-   "u": "/accesorios/gorras/?page=2",
-   "cat": "/accesorios/gorras/",
-   "keys": [
-    "/productos/gorra-gitana-borravino",
-    "/productos/gorra-gitana-azul-marino",
-    "/productos/gorra-escocesa-marron",
-    "/productos/gorra-escocesa-bordo",
-    "/productos/gorra-pano-marron-claro",
-    "/productos/gorra-pano-gris-oscuro",
-    "/productos/gorra-eco-cuero-marron",
-    "/productos/gorra-eco-cuero-negro"
    ]
   },
   {
