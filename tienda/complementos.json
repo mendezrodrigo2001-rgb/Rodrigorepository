@@ -1,0 +1,188 @@
+{
+ "nota": "Productos aprobados para \"Completalo con\" (buenas fotos). Se actualiza sin republicar el diseno.",
+ "pairs": [
+  {
+   "u": "/accesorios/cintos/",
+   "cat": "/accesorios/cintos/",
+   "keys": [
+    "/productos/cinto-negro-brillo-plata-tr9os",
+    "/productos/faja-circulos-basica-negro",
+    "/productos/cinto-ovalo-labrado-marron",
+    "/productos/cinto-eco-c-botas-texas-marron",
+    "/productos/cinto-fajagamuza-fleco-marron",
+    "/productos/cinto-faja-eco-corazon-negro",
+    "/productos/faja-cuadrados-con-tacha-blanco",
+    "/productos/faja-negra-hebilla-flores",
+    "/productos/faja-corazon-y-circulo-negro",
+    "/productos/faja-peltre-heb-triangulo",
+    "/productos/cinto-negro-arandelas-plateada"
+   ]
+  },
+  {
+   "u": "/accesorios/cintos/?page=2",
+   "cat": "/accesorios/cintos/",
+   "keys": [
+    "/productos/cinto-bordo-arandelas-plateado",
+    "/productos/faja-negra-hebilla-triangular",
+    "/productos/faja-print-c-tachas-plateada",
+    "/productos/faja-plata-doble-heb",
+    "/productos/faja-negra-doble-heb",
+    "/productos/faja-negra-heb-dorada",
+    "/productos/faja-bordo-heb-dorada",
+    "/productos/cinto-circulos-plata",
+    "/productos/cinto-print-c-tachas-doradas",
+    "/productos/cinto-faja-lurex-negro"
+   ]
+  },
+  {
+   "u": "/accesorios/cintos/?page=3",
+   "cat": "/accesorios/cintos/",
+   "keys": [
+    "/productos/faja-hebilla-cubo-marron",
+    "/productos/faja-heb-cubo-negro",
+    "/productos/cinto-faja-negro-corazon",
+    "/productos/cinto-rafia",
+    "/productos/cinto-faja-heb-strass-blanco",
+    "/productos/cinto-rafia-h-dorada-suela",
+    "/productos/cinto-frunce-suela-dorada"
+   ]
+  },
+  {
+   "u": "/accesorios/collares/",
+   "cat": "/accesorios/collares/",
+   "keys": [
+    "/productos/collar-pechera-cadenas-con-flecos-dorado",
+    "/productos/collar-largo-sol-y-nacar-plateado",
+    "/productos/collar-largo-sol-y-nacar-dorado",
+    "/productos/collar-largo-libelula-y-flores-plateado",
+    "/productos/collar-gamuza-y-cadena-arabe-marron",
+    "/productos/collar-gamuza-y-cadena-arabe-negro",
+    "/productos/collar-cadena-eslabones-dobles-plateado-brillante",
+    "/productos/collar-doble-cadena-dije-gota-con-aros-plateado",
+    "/productos/collar-largo-triple-cadena-dije-ovalo-plateado",
+    "/productos/collar-choker-gamuza-corazones-marron"
+   ]
+  },
+  {
+   "u": "/accesorios/collares/?page=2",
+   "cat": "/accesorios/collares/",
+   "keys": [
+    "/productos/collar-choker-gamuza-circulo-y-borlas-marron",
+    "/productos/collar-choker-estrella-de-mar-y-caracoles",
+    "/productos/collar-choker-caracol-mostacillas-plateado",
+    "/productos/collar-choker-cadena-dijes-marinos-turquesa",
+    "/productos/collar-choker-cadena-dijes-marinos-plateado",
+    "/productos/collar-choker-dije-dragon-marron",
+    "/productos/collar-largo-argolla-marron",
+    "/productos/collar-largo-argolla-bordo"
+   ]
+  },
+  {
+   "u": "/accesorios/collares/?page=3",
+   "cat": "/accesorios/collares/",
+   "keys": [
+    "/productos/collar-largo-argolla-animal-print-dorado",
+    "/productos/collar-largo-dije-cuadrado-negro",
+    "/productos/collar-largo-dije-cuadrado-animal-print",
+    "/productos/collar-cadena-dije-corona-dorado"
+   ]
+  },
+  {
+   "u": "/accesorios/gorras/",
+   "cat": "/accesorios/gorras/",
+   "keys": [
+    "/productos/boina-negra-hebilla-dirza",
+    "/productos/gorra-piluso-negro-liso",
+    "/productos/gorra-yute-negro",
+    "/productos/gorra-piluso-beige-liso",
+    "/productos/gorra-piluso-tribales-negro",
+    "/productos/gorro-charol-bordo",
+    "/productos/gorro-charol-negro",
+    "/productos/gorra-icon-verde",
+    "/productos/gorra-la-turquesa"
+   ]
+  },
+  {
+   "u": "/accesorios/gorras/?page=2",
+   "cat": "/accesorios/gorras/",
+   "keys": [
+    "/productos/gorra-gitana-borravino",
+    "/productos/gorra-gitana-azul-marino",
+    "/productos/gorra-escocesa-marron",
+    "/productos/gorra-escocesa-bordo",
+    "/productos/gorra-pano-marron-claro",
+    "/productos/gorra-pano-gris-oscuro",
+    "/productos/gorra-eco-cuero-marron",
+    "/productos/gorra-eco-cuero-negro"
+   ]
+  },
+  {
+   "u": "/camperas/",
+   "cat": "/camperas/",
+   "keys": [
+    "/productos/over-doble-cierre-19x77",
+    "/productos/eco-cuero-queens-gastada-by7w3",
+    "/productos/eco-cuero-rocky-negra-h70hz",
+    "/productos/eco-cuero-cinto-marron-1bulp",
+    "/productos/eco-cuero-negra-1nqde",
+    "/productos/campera-reversible-15eub",
+    "/productos/campera-eco-cuero-cinto-negro-1gs7o"
+   ]
+  },
+  {
+   "u": "/buzos-y-sweaters/",
+   "cat": "/buzos-y-sweaters/",
+   "keys": [
+    "/productos/buzo-animal-print-awm4x"
+   ]
+  },
+  {
+   "u": "/camisacos/",
+   "cat": "/camisacos/",
+   "keys": [
+    "/productos/camisaco-escoces-1c6xw",
+    "/productos/camisaco-cuadrille-113ix",
+    "/productos/camisaco-c-corderito-1cw1k",
+    "/productos/camisaco-bolsillos-18bf2",
+    "/productos/lenadora-marron-1ah73"
+   ]
+  },
+  {
+   "u": "/chalecos/",
+   "cat": "/chalecos/",
+   "keys": [
+    "/productos/chaleco-caty-negro-1hviq"
+   ]
+  },
+  {
+   "u": "/pollera-1801f/",
+   "cat": "/pollera-1801f/",
+   "keys": [
+    "/productos/mini-rio-ncojv",
+    "/productos/short-pollera-leon-vhnqg"
+   ]
+  },
+  {
+   "u": "/pantalones-pwpd4/",
+   "cat": "/pantalones-pwpd4/",
+   "keys": [
+    "/productos/caty-puntilla-1lioo"
+   ]
+  },
+  {
+   "u": "/shorts-y-bermudas/",
+   "cat": "/shorts-y-bermudas/",
+   "keys": [
+    "/productos/bermuda-jackson-ajyy2",
+    "/productos/bermuda-luna-1ri4s",
+    "/productos/bermuda-nigeria-5o7mf",
+    "/productos/bermuda-gloria-1mz1h",
+    "/productos/short-liverpool-29qwm",
+    "/productos/short-marsella-yypic",
+    "/productos/short-egipto-b5ttu",
+    "/productos/short-orion-184yc",
+    "/productos/short-emily-vkr0t"
+   ]
+  }
+ ]
+}
