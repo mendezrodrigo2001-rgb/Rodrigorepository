@@ -60,3 +60,16 @@
 3. **Beneficio de envío/cuotas con umbral** (Julien: gratis desde $190.000; LUCEMIROPA 9 cuotas): ticket promedio de Gitana ≈ $200k → evaluar con el dueño un umbral de envío gratis o más cuotas; no se cambia nada en la tienda sin su OK.
 **Aplicado hoy:** solo repo (este archivo). No toqué Drive: el cambio de estilo ya quedó en el PLAYBOOK (full-bleed + movimiento) y se aplica al producir la semana del 30/11.
 **Pendiente del dueño:** ¿los 2 anuncios activos de "Gitana Jeans" son suyos? ¿thalassodenim: capturas de su grilla?
+
+## Día 4 — 26/11/2026 (corrida automática 18:57 AR)
+**Visto de verdad (Meta Ad Library AR; solo títulos/fechas, sin métricas):** búsquedas "jean cyber monday" (35 resultados, casi todo de campañas pasadas) y "jeans mujer premium calce" (8, mayormente mayoristas: BURO DENIM, Gardan Jeans, Shithappensjeans → no son competencia directa de venta al público).
+- Atelier 86 (activo): "El calce que todas eligen" y "Un jean para cada estilo" → social proof + variedad en una línea.
+- Proverbio Mujer: títulos con modelo + color ("Jean Wide Leg Abedul", "Jean Balloon Geranio") → refuerza el patrón de nombrar modelo + lavado/color (visto el 25/11 con TANA y Salsa Denim).
+- Ancla de precio: Fiore "Cada conjunto de lino a menos de $57.000". Combos: Mimo Store "Comprá 1 y recibí 3" (Cyber, pasado).
+- Andina Club sigue con "Basta de usar jeans que aprietan" (hook de dolor, ya registrado el día 1).
+**Inferencia:** hoy hay poca señal nueva; la tendencia se repite (calce + modelo/color + promo de packs).
+**3 aprendizajes accionables**
+1. "El calce que todas eligen" = prueba social corta: usar en Gitana testimonio real + titular de una línea ("La que eligen cuando no quieren pensar"), solo con testimonios reales.
+2. Nombrar siempre modelo + lavado en el titular (ya en PLAYBOOK).
+3. Ancla de precio honesta: si el dueño quiere, titular "Jeans desde $X" con el precio real de la web (verificar en tienda antes).
+**Aplicado:** solo repo. No se tocó Drive. Pendientes del dueño: ¿los 2 anuncios de "Gitana Jeans"? ¿con oferta o sin oferta para el anuncio estilo Alo? ¿capturas de thalassodenim?
