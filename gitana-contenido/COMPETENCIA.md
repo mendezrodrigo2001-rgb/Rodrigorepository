@@ -1,4 +1,4 @@
-# Análisis diario de competencia (tarea programada todos los días 18:57 hora Argentina)
+# Análisis de competencia (tarea programada UNA VEZ POR SEMANA: lunes 18:57 hora Argentina; cambio pedido por el dueño el 27/11/2026)
 
 **Objetivo (pedido del dueño 23/11/2026):** ver qué le funciona a la competencia, mejorarlo y replicarlo con la identidad de Gitana (premium, natural, experiencia/identidad; sin copiar piezas ni textos).
 
